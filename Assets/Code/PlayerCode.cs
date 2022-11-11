@@ -12,6 +12,7 @@ public class PlayerCode : MonoBehaviour
     //bool cooldown = false;
     bool dodging = false;
     bool attacking = false;
+    Rigidbody2D _rigidbody;
 
     private void Awake()
     {
@@ -41,7 +42,7 @@ public class PlayerCode : MonoBehaviour
 
         //Movement Code
         if (!dodging && !attacking) {
-            xSpeed = Input.GetAxisRaw("Horizontal") * speed;
+            xSpeed = Input.GetAxisRaw("Horizontal") * 5;
             Vector2 movement = new Vector2(xSpeed, _rigidbody.velocity.y);
             _rigidbody.velocity = Vector2.Lerp(_rigidbody.velocity, movement, moveConstant);
         }
@@ -83,7 +84,7 @@ public class PlayerCode : MonoBehaviour
         //roll code
         //add constant velocity for period of time
         Debug.Log("Dodge!");
-        rolling = false;
+        dodging = false;
     }
 
 }
