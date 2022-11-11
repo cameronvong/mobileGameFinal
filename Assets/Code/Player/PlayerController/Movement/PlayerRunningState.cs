@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Jin.Controller.State;
+using Jin.EntityStateController.State;
 
-namespace Jin.Player.States
+namespace Jin.PlayerControllerMachine.States
 {
     public class PlayerRunningState : IState
     {

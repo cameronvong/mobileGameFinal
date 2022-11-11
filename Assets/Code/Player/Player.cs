@@ -1,30 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Jin.Player.States;
+using Jin.PlayerControllerMachine.States;
 
 public class Player : MonoBehaviour
 {
-    private PlayerMovementStateMachine movementSM;
+    public PlayerStateMachine stateMachine { get; private set; }
+    
+    // STATES
+    public PlayerIdleState IdleState { get; private set; }
+    public PlayerMoveState MoveState { get; private set; }
+    
+    public Animator AnimComponent { get; private set; }
+
+    public bool Grounded = true;
     // Start is called before the first frame update
     private void Awake()
     {
-        movementSM = new PlayerMovementStateMachine();
+        stateMachine = new PlayerStateMachine();
+        IdleState = new PlayerIdleState(this, stateMachine, "idle");
     }
 
     void Start()
     {
-        movementSM.ChangeState(movementSM.IdleState);
+        // movementSM.ChangeState(movementSM.IdleState);
+        AnimComponent = GetComponent<Animator>();
+        stateMachine.Initialize(IdleState);
     }
 
     // Update is called once per frame
     void Update()
     {
-        movementSM.HandleInput();
-        movementSM.Update();
+        stateMachine.HandleInput();
+        stateMachine.Update();
     }
 
     private void FixedUpdate() {
-        movementSM.PhysicsUpdate();
+        stateMachine.PhysicsUpdate();
     }
 }

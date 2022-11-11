@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Jin.Controller.State
+namespace Jin.EntityStateController.State
 {
     public interface IState
     {

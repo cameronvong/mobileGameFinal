@@ -2,30 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Jin.Controller.State
+namespace Jin.EntityStateController.State
 {
     public abstract class StateMachine
     {
-        protected IState currentState;
+        public IState currentState { get; protected set; }
 
-        public void ChangeState(IState nextState)
+        public virtual void ChangeState(IState nextState)
         {
             currentState?.Exit();
             currentState = nextState;
             currentState.Enter();
         }
 
-        public void HandleInput()
+        public virtual void HandleInput()
         {
             currentState?.HandleInput();
         }
 
-        public void Update()
+        public virtual void Update()
         {
             currentState?.Update();
         }
 
-        public void PhysicsUpdate()
+        public virtual void PhysicsUpdate()
         {
             currentState?.PhysicsUpdate();
         }
