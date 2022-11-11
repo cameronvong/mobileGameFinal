@@ -9,6 +9,7 @@ public class PlayerCode : MonoBehaviour
     private float xSpeed = 0;
     private float ySpeed = 0;
     private float stamina = 150;
+    //bool cooldown = false;
     bool dodging = false;
     bool attacking = false;
 
@@ -46,7 +47,7 @@ public class PlayerCode : MonoBehaviour
         }
 
         //Attack Code
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !attacking && !dodging)
         {  
             attacking = true;
             Debug.Log("Attacking");
@@ -54,7 +55,7 @@ public class PlayerCode : MonoBehaviour
         }
 
         //Roll Code
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && !attacking && !dodging)
         {  
             dodging = true;
             Debug.Log("Rolling");
@@ -84,4 +85,5 @@ public class PlayerCode : MonoBehaviour
         Debug.Log("Dodge!");
         rolling = false;
     }
+
 }
