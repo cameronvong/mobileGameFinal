@@ -9,4 +9,19 @@ public class PlayerIdleState : PlayerGroundedState
     {
         
     }
+
+    public override void Enter()
+    {
+        base.Enter();
+        Debug.Log("Player is idle");
+    }
+
+    public override void PhysicsUpdate() { 
+        base.PhysicsUpdate();
+        Debug.Log(movementInput);
+        if(movementInput.x != 0f)
+        {
+            stateMachine.ChangeState(player.MoveState);
+        }
+    }
 }

@@ -3,28 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using Jin.PlayerControllerMachine.States;
 
+[RequireComponent(typeof(PlayerInputManager))]
 public class Player : MonoBehaviour
 {
+    public PlayerInputManager InputManager { get; private set; }
     public PlayerStateMachine stateMachine { get; private set; }
+
+    public Vector3 Position => transform.position;
+    public Vector2 Velocity => rigidBody2D.velocity;
+
+    [SerializeField] private LayerMask groundLayer;
     
     // STATES
     public PlayerIdleState IdleState { get; private set; }
     public PlayerMoveState MoveState { get; private set; }
     
     public Animator AnimComponent { get; private set; }
+    public Rigidbody2D rigidBody2D;
+    private BoxCollider2D boxCollider;
 
-    public bool Grounded = true;
     // Start is called before the first frame update
     private void Awake()
     {
         stateMachine = new PlayerStateMachine();
         IdleState = new PlayerIdleState(this, stateMachine, "idle");
+        MoveState = new PlayerMoveState(this, stateMachine, "move"); // Later need to change this to running, walking, & jumping
+        
+        InputManager = GetComponent<PlayerInputManager>();
+        AnimComponent = GetComponent<Animator>();
+        rigidBody2D = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     void Start()
     {
         // movementSM.ChangeState(movementSM.IdleState);
-        AnimComponent = GetComponent<Animator>();
         stateMachine.Initialize(IdleState);
     }
 
@@ -37,5 +50,10 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate() {
         stateMachine.PhysicsUpdate();
+    }
+
+    public bool IsGrounded()
+    {
+        return Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .1f, groundLayer);
     }
 }
