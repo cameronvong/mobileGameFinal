@@ -6,15 +6,24 @@ using Jin.PlayerControllerMachine.States;
 
 public class PlayerStateMachine : StateMachine<PlayerState>
 {
-    public void Initialize(PlayerState state)
+    protected PlayerState FallbackState;
+    public void Initialize(PlayerState state, PlayerState fallbackState = null)
     {
         currentState = state;
         currentState.Enter();
+        this.FallbackState = fallbackState;
     }
 
     public override void ChangeState(PlayerState nextState)
     {
-        if(!nextState.Validate()) return;
+        if(!nextState.Validate()) {
+            if(FallbackState != null) {
+                currentState?.Exit();
+                currentState = FallbackState;
+                currentState.Enter();
+            }
+            return;
+        }
         currentState?.Exit();
         currentState = nextState;
         currentState.Enter();
