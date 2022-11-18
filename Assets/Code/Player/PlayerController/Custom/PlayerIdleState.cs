@@ -21,7 +21,7 @@ public class PlayerIdleState : PlayerGroundedState
         Debug.Log(movementInput);
         if(movementInput.x != 0f)
         {
-            stateMachine.ChangeState(player.MoveState);
+            stateMachine.ChangeState(player.WalkState);
         }
     }
 }

@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     
     // STATES
     public PlayerIdleState IdleState { get; private set; }
-    public PlayerMoveState MoveState { get; private set; }
+    public PlayerMoveState WalkState { get; private set; }
     
     public Animator AnimComponent { get; private set; }
     public Rigidbody2D rigidBody2D;
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     {
         stateMachine = new PlayerStateMachine();
         IdleState = new PlayerIdleState(this, stateMachine, "idle");
-        MoveState = new PlayerMoveState(this, stateMachine, "move"); // Later need to change this to running, walking, & jumping
+        WalkState = new PlayerWalkingState(this, stateMachine, "walk");
         
         InputManager = GetComponent<PlayerInputManager>();
         AnimComponent = GetComponentInChildren<Animator>();
