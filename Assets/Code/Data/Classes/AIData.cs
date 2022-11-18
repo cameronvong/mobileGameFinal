@@ -13,4 +13,6 @@ public class AIData : ScriptableObject {
     public float AttackSpeed = 1.5f;
     public float AttackCooldown = 1f;
     public float SpecialAttackCooldown = 30f;
+    public float MeleeAttackRange = 1f;
+    public float RangeAttackRange = 10f;
 }

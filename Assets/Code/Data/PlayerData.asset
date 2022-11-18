@@ -17,3 +17,6 @@ MonoBehaviour:
   RunningSpeed: 10
   BaseMeleeDamage: 5
   BaseRangeDamage: 5
+  AttackSpeed: 0.5
+  MaxAttackCombo: 1
+  MeleeAttackRange: 1
