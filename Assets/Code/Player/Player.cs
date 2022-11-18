@@ -69,15 +69,11 @@ public class Player : MonoBehaviour
         return Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .1f, groundLayer);
     }
 
-    // private IEnumerator Dash() {
-    //     checkDash = false;
-    //     isDashing = true;
-    //     float originalGrav = rb.gravityScale;
-    //     rb.gravityScale = 0f;
-    //     rb.velocity = new Vector2(transform.localScale.x * dashSpeed, 0f);
-    //     yield return new WaitForSeconds(dashTime);
-    //     rb.gravityScale = originalGrav;
-    //     yield return new WaitForSeconds(dashCD);
-    //     checkDash = true;
-    // }
+    private IEnumerator Dash() {
+        checkDash = false;
+        isDashing = true;
+        yield return new WaitForSeconds(dashTime);
+        yield return new WaitForSeconds(dashCD);
+        checkDash = true;
+    }
 }
