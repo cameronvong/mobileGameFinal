@@ -26,11 +26,7 @@ public class Player : MonoBehaviour
     private BoxCollider2D boxCollider;
     public SpriteRenderer spriteRenderer;
 
-    private bool checkDash = true;
-    private bool isDashing;
-    private float dashSpeed = 10f;
-    private float dashTime = 0.4f;
-    private float dashCD = 1.2f;
+    public float CurrentDashTime;
 
     // Start is called before the first frame update
     private void Awake()
@@ -46,6 +42,7 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
         Stamina = PlayerStats.Stamina;
+        CurrentDashTime = PlayerStats.DashCooldownTime;
     }
 
     void Start()
@@ -57,17 +54,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isDashing) {
-            return;
-        }
         stateMachine.HandleInput();
         stateMachine.Update();
     }
 
-    private void FixedUpdate() {
-        if (isDashing) {
-            return;
-        }
+    private void FixedUpdate() 
+    {
+        CurrentDashTime += Time.deltaTime;
         stateMachine.PhysicsUpdate();
     }
 

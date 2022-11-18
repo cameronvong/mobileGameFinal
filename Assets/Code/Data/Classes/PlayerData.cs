@@ -13,4 +13,7 @@ public class PlayerData : ScriptableObject {
     public int MaxAttackCombo = 1;
     public float MeleeAttackRange = 1f;
     public float Stamina = 100f;
+    public float DashCooldownTime = 1.2f;
+    public float DashTime = 0.4f;
+    public float DashSpeed = 10f;
 }

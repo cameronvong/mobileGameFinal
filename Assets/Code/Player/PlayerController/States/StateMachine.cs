@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace Jin.EntityStateController.State
 {
-    public abstract class StateMachine
+    public abstract class StateMachine<T> where T : IState
     {
-        public IState currentState { get; protected set; }
+        public T currentState { get; protected set; }
 
-        public virtual void ChangeState(IState nextState)
+        public virtual void ChangeState(T nextState)
         {
             currentState?.Exit();
             currentState = nextState;
