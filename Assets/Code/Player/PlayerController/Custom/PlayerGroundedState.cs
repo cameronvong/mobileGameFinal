@@ -10,9 +10,12 @@ public class PlayerGroundedState : PlayerState
     public override void Enter() {
         if(!Validate())
             return;
+        base.Enter();
     }
     
-    public override void Exit() { }
+    public override void Exit() {
+        base.Exit();
+     }
 
     public override void HandleInput() {
         if(!Validate())
