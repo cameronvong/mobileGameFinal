@@ -280,6 +280,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4908200592680879232, guid: 4c9ac8a9a7ebaae4a90d8fc1b4a46cfd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
     - target: {fileID: 4908200592680879233, guid: 4c9ac8a9a7ebaae4a90d8fc1b4a46cfd, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -326,6 +330,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4908200592680879259, guid: 4c9ac8a9a7ebaae4a90d8fc1b4a46cfd, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908200592680879259, guid: 4c9ac8a9a7ebaae4a90d8fc1b4a46cfd, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -385,9 +393,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7070688071090176995, guid: 613d1107cc845d54ba2714e4457c55b6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7070688071090176998, guid: 613d1107cc845d54ba2714e4457c55b6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 722879151}
+    - target: {fileID: 7070688071390002585, guid: 613d1107cc845d54ba2714e4457c55b6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 613d1107cc845d54ba2714e4457c55b6, type: 3}
