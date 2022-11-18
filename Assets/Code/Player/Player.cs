@@ -79,11 +79,7 @@ public class Player : MonoBehaviour
     private IEnumerator Dash() {
         checkDash = false;
         isDashing = true;
-        float originalGrav = rb.gravityScale;
-        rb.gravityScale = 0f;
-        rb.velocity = new Vector2(transform.localScale.x * dashSpeed, 0f);
         yield return new WaitForSeconds(dashTime);
-        rb.gravityScale = originalGrav;
         yield return new WaitForSeconds(dashCD);
         checkDash = true;
     }
