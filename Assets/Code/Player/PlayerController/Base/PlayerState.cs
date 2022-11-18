@@ -11,6 +11,7 @@ namespace Jin.PlayerControllerMachine.States
         protected PlayerStateMachine stateMachine;
 
         protected string animationName;
+        protected int statePriority;
 
         public virtual void Enter()
         {
@@ -28,12 +29,19 @@ namespace Jin.PlayerControllerMachine.States
         public abstract void Update();
         public abstract void PhysicsUpdate();
         public abstract bool Validate();
+        public virtual bool IsAction() {
+            return false;
+        }
 
         public PlayerState(Player player, PlayerStateMachine stateMachine, string animationName)
         {
             this.player = player;
             this.stateMachine = stateMachine;
             this.animationName = animationName;
+        }
+
+        public int GetStatePriority() {
+            return statePriority;
         }
     }
 

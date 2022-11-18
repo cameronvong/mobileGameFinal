@@ -13,6 +13,7 @@ public class PlayerMoveState : PlayerGroundedState
     {
         WalkingSpeedModifier = player.PlayerStats.WalkingSpeed;
         RunningSpeedModifier = player.PlayerStats.RunningSpeed;
+        statePriority = 999;
     }
 
     public override void PhysicsUpdate()
