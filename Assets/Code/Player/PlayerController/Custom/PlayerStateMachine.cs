@@ -7,6 +7,9 @@ using Jin.PlayerControllerMachine.States;
 public class PlayerStateMachine : StateMachine<PlayerState>
 {
     protected PlayerState FallbackState;
+    protected PlayerState PreviousState;
+    protected bool PerformingAction;
+    
     public void Initialize(PlayerState state, PlayerState fallbackState = null)
     {
         currentState = state;
@@ -16,16 +19,30 @@ public class PlayerStateMachine : StateMachine<PlayerState>
 
     public override void ChangeState(PlayerState nextState)
     {
+        if(PerformingAction && nextState.GetStatePriority() <= currentState.GetStatePriority()) return;
+        // if(currentState != null && currentState.IsAction()) return;
+        currentState?.Exit();
+        PreviousState = currentState;
         if(!nextState.Validate()) {
-            currentState?.Exit();
             if(FallbackState != null) {
                 currentState = FallbackState;
                 currentState.Enter();
             }
             return;
         }
-        currentState?.Exit();
         currentState = nextState;
         currentState.Enter();
+    }
+
+    public virtual void ForceChangeState(PlayerState nextState) {
+        base.ChangeState(nextState);
+    }
+
+    public virtual void SetPerformingAction(bool performingAction) {
+        this.PerformingAction = performingAction;
+    }
+
+    public PlayerState GetPreviousState() {
+        return PreviousState;
     }
 }

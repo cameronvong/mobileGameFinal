@@ -48,7 +48,6 @@ public class PlayerGroundedState : PlayerState
     {
         movementInput = player.InputManager.playerControls.Gameplay.Movement.ReadValue<Vector2>();
         Vector2 movementTD = player.InputManager.playerControls.Gameplay.Movement.ReadValue<Vector2>();
-        Debug.Log("Movement Input: " + movementTD.ToString());
     }
 
     

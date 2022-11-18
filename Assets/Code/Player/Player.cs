@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
         stateMachine = new PlayerStateMachine();
         IdleState = new PlayerIdleState(this, stateMachine, "idle");
         WalkState = new PlayerWalkingState(this, stateMachine, "walk");
+        DodgeState = new PlayerEvadeState(this, stateMachine, "dodge");
         
         InputManager = GetComponent<PlayerInputManager>();
         AnimComponent = GetComponentInChildren<Animator>();
@@ -57,6 +58,8 @@ public class Player : MonoBehaviour
     {
         stateMachine.HandleInput();
         stateMachine.Update();
+        CurrentDashTime += Time.deltaTime;
+        Debug.Log($"Current state: {stateMachine.currentState}");
     }
 
     private void FixedUpdate() 
@@ -69,6 +72,12 @@ public class Player : MonoBehaviour
     {
         return Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .1f, groundLayer);
     }
+
+    public void Dash() {
+        stateMachine.ChangeState(DodgeState);
+    }
+
+
 
     // private IEnumerator Dash() {
     //     checkDash = false;
