@@ -8,14 +8,13 @@ public class PlayerEvadeState : PlayerGroundedState
     public float DashCooldownTime;
     public float DashTime;
     public float DashSpeed;
-    private bool CanDash = true;
 
     public PlayerEvadeState(Player player, PlayerStateMachine stateMachine, string animationName) : base(player, stateMachine, animationName)
     {
         DashCooldownTime = player.PlayerStats.DashCooldownTime;
         DashTime = player.PlayerStats.DashTime;
         DashSpeed = player.PlayerStats.DashSpeed;
-        statePriority = 2;
+        statePriority = 11;
     }
 
     public override void Enter() {

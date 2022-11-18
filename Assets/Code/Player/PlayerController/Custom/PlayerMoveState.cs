@@ -8,6 +8,7 @@ public class PlayerMoveState : PlayerGroundedState
     protected Vector2 WorkspaceMovementVector;
     protected float WalkingSpeedModifier = 5f;
     protected float RunningSpeedModifier = 10f;
+    private float FacingDirection = 1f;
 
     public PlayerMoveState(Player player, PlayerStateMachine stateMachine, string animationName) : base(player, stateMachine, animationName)
     {
@@ -23,6 +24,8 @@ public class PlayerMoveState : PlayerGroundedState
         {
             stateMachine.ChangeState(player.IdleState);
         } else {
+            Debug.Log($"{movementInput.normalized.x}");
+            ShouldFlip(movementInput.normalized.x);
             Move();
         }
     }
@@ -31,7 +34,7 @@ public class PlayerMoveState : PlayerGroundedState
     {
         if(!base.Validate() || movementInput == Vector2.zero)
             return;
-        player.spriteRenderer.flipX = movementInput.x < 0;
+        // player.spriteRenderer.flipX = movementInput.x < 0;
         SetHorizontalMovement(WalkingSpeedModifier * movementInput.x);
     }
 
@@ -39,5 +42,24 @@ public class PlayerMoveState : PlayerGroundedState
     {
         WorkspaceMovementVector.Set(velocityX, player.Velocity.y);
         player.rigidBody2D.velocity = WorkspaceMovementVector;
+    }
+
+    private void ShouldFlip(float xInput)
+    {
+        if(xInput != 0 && xInput != FacingDirection)
+        {
+            Flip();
+        }
+    }
+
+    private void Flip()
+    {
+        FacingDirection *= -1;
+        Debug.Log($"Flipped! {FacingDirection}");
+        // FacingDirection *= -1;
+        player.spriteRenderer.flipX = FacingDirection == -1;
+        var opposite = -player.rigidBody2D.velocity;
+        player.rigidBody2D.AddForce(opposite * Time.deltaTime);
+        // player.transform.Rotate(0.0f, 180f, 0.0f);
     }
 }

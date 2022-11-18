@@ -14,13 +14,15 @@ public class Player : MonoBehaviour
 
     public PlayerData PlayerStats;
     public float Stamina;
+    public float CurrentAttackTime;
 
     [SerializeField] private LayerMask groundLayer;
     
     // STATES
     public PlayerIdleState IdleState { get; private set; }
     public PlayerMoveState WalkState { get; private set; }
-    public PlayerEvadeState DodgeState {get; private set; }
+    public PlayerEvadeState DodgeState { get; private set; }
+    public PlayerAttackState AttackState {  get; private set; }
     
     public Animator AnimComponent { get; private set; }
     public Rigidbody2D rigidBody2D;
@@ -36,6 +38,7 @@ public class Player : MonoBehaviour
         IdleState = new PlayerIdleState(this, stateMachine, "idle");
         WalkState = new PlayerWalkingState(this, stateMachine, "walk");
         DodgeState = new PlayerEvadeState(this, stateMachine, "dodge");
+        AttackState = new PlayerAttackState(this, stateMachine, "attack");
         
         InputManager = GetComponent<PlayerInputManager>();
         AnimComponent = GetComponentInChildren<Animator>();
@@ -45,6 +48,7 @@ public class Player : MonoBehaviour
 
         Stamina = PlayerStats.Stamina;
         CurrentDashTime = PlayerStats.DashCooldownTime;
+        CurrentAttackTime = 1f/PlayerStats.AttackSpeed;
     }
 
     void Start()
@@ -65,6 +69,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate() 
     {
         CurrentDashTime += Time.deltaTime;
+        CurrentAttackTime += Time.deltaTime;
         stateMachine.PhysicsUpdate();
     }
 
@@ -75,6 +80,11 @@ public class Player : MonoBehaviour
 
     public void Dash() {
         stateMachine.ChangeState(DodgeState);
+    }
+
+    public void Attack() {
+        Debug.Log("Attacking");
+        stateMachine.ChangeState(AttackState);
     }
 
 

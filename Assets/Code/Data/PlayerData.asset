@@ -17,6 +17,10 @@ MonoBehaviour:
   RunningSpeed: 10
   BaseMeleeDamage: 5
   BaseRangeDamage: 5
-  AttackSpeed: 0.5
+  AttackSpeed: 2
   MaxAttackCombo: 1
   MeleeAttackRange: 1
+  Stamina: 100
+  DashCooldownTime: 1.2
+  DashTime: 0.4
+  DashSpeed: 10
