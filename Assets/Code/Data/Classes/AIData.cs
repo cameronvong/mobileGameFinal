@@ -1,0 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "PlayerData", menuName = "GameData/AIData", order = 0)]
+public class AIData : ScriptableObject {
+    public float Health = 100f;
+    public float WalkingSpeed = 5f;
+    public float RunningSpeed = 10f;
+    public float BaseMeleeDamage = 5f;
+    public float BaseRangeDamage = 5f;
+    public int MaxAttackCombo = 1;
+    public float AttackSpeed = 1.5f;
+    public float AttackCooldown = 1f;
+    public float SpecialAttackCooldown = 30f;
+}

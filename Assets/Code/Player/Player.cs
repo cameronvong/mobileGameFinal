@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     public Vector3 Position => transform.position;
     public Vector2 Velocity => rigidBody2D.velocity;
 
+    public PlayerData PlayerStats;
+
     [SerializeField] private LayerMask groundLayer;
     
     // STATES
@@ -30,7 +32,7 @@ public class Player : MonoBehaviour
         MoveState = new PlayerMoveState(this, stateMachine, "move"); // Later need to change this to running, walking, & jumping
         
         InputManager = GetComponent<PlayerInputManager>();
-        AnimComponent = GetComponent<Animator>();
+        AnimComponent = GetComponentInChildren<Animator>();
         rigidBody2D = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
     }

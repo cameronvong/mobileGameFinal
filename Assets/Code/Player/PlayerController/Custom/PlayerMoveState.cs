@@ -6,10 +6,13 @@ using Jin.PlayerControllerMachine.States;
 public class PlayerMoveState : PlayerGroundedState
 {
     protected Vector2 WorkspaceMovementVector;
+    protected float WalkingSpeedModifier = 5f;
+    protected float RunningSpeedModifier = 10f;
 
     public PlayerMoveState(Player player, PlayerStateMachine stateMachine, string animationName) : base(player, stateMachine, animationName)
     {
-        
+        WalkingSpeedModifier = player.PlayerStats.WalkingSpeed;
+        RunningSpeedModifier = player.PlayerStats.RunningSpeed;
     }
 
     public override void PhysicsUpdate()
@@ -27,8 +30,7 @@ public class PlayerMoveState : PlayerGroundedState
     {
         if(!base.Validate() || movementInput == Vector2.zero)
             return;
-        Debug.Log("Player is moving");
-        SetHorizontalMovement(5f * movementInput.x);
+        SetHorizontalMovement(WalkingSpeedModifier * movementInput.x);
     }
 
     protected virtual void SetHorizontalMovement(float velocityX)
