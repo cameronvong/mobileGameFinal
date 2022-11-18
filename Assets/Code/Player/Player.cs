@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     public float CurrentDashTime;
+    public float GeneralLocalTime = 1f;
 
     // Start is called before the first frame update
     private void Awake()
@@ -70,6 +71,15 @@ public class Player : MonoBehaviour
     {
         CurrentDashTime += Time.deltaTime;
         CurrentAttackTime += Time.deltaTime;
+        GeneralLocalTime += Time.deltaTime;
+
+        if(GeneralLocalTime >= 1f)
+        {
+            if(Stamina < 100) 
+            {
+                Stamina += 5;
+            }
+        }
         stateMachine.PhysicsUpdate();
     }
 
@@ -85,9 +95,13 @@ public class Player : MonoBehaviour
     public void Attack() {
         Debug.Log("Attacking");
         stateMachine.ChangeState(AttackState);
+        GameObject obj = GameObject.FindWithTag("Boss");
+        Debug.Log($"Distance is: {Vector3.Distance(obj.transform.position, transform.position)}");
+        if (Vector3.Distance(obj.transform.position, transform.position) <= PlayerStats.MeleeAttackRange)
+        {
+           BunnyEventManager.Instance.Fire<float>("DamageBossRequest", new BunnyMessage<float>(10f, this));
+        }
     }
-
-
 
     // private IEnumerator Dash() {
     //     checkDash = false;

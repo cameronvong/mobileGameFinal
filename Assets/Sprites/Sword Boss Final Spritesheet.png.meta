@@ -1,0 +1,1059 @@
+fileFormatVersion: 2
+guid: f666d4d2682633948b90eca27dad500f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9217
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb79f90aedb3cc4ba6eb3c3089b1170
+      internalID: -586035253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 9217
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333a169a9c75aa64090ae50ca3545b6b
+      internalID: -1605187100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 9217
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b2c2c4c34c304448d89c8680ac9374
+      internalID: 1712578415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 9217
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47899c6aafc4a12449f952c27d3c75c7
+      internalID: 2089687613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 9217
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5315563893499d341a5d1e08756868bd
+      internalID: 906050530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 9217
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265431807f3a476478d00efef62507a4
+      internalID: 231424441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7682
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bcfaf339b78b3445866720d8137ad3d
+      internalID: 1135509716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 7682
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d125b67bd4b8348aef6adf2d8c6853
+      internalID: 1417474250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 7682
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057043275a741eb4bbdb650891acb2ef
+      internalID: -693949797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 7682
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc72377d66c99684fa266be22605a366
+      internalID: -1426283941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 7682
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e5f9a5a9a7b314bb47d6da74037a61
+      internalID: -159311159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 7682
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52bd0acde918354986c106f86165221
+      internalID: 438392092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6147
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d1cba41b0a7944ca07c88e4af9378e
+      internalID: 381835664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 6147
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41735a4b619c46c4896c0e0fc6d1c5fe
+      internalID: -468018778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 6147
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 870c86852ef216843a13248549112814
+      internalID: 2076224201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 6147
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14689c10082750f45bacbb7f759b1031
+      internalID: 792369019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 6147
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127f3691a7f51b34db9c90a23e24ae0c
+      internalID: 373831101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 6147
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15cae42425dcc6b4d8ba7bb4dcc2c350
+      internalID: 1209122555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4612
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ff3a1b4d500544bb3ee7a628d97971
+      internalID: 1606149498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 4612
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b632147c5a80d4c49ae1f7add0937ccb
+      internalID: -462953246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 4612
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b66d25e42825a34c99b3e278eb2e0c2
+      internalID: -125659234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 4612
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9ac1c729711314e8efecbcacc82c2d
+      internalID: 2045070151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 4612
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a85b0b864355874ab92e0693c9aab27
+      internalID: 1168957641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 4612
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ff14ea2433ad74ba08e981edc3bbc2
+      internalID: -734608359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3077
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50df6679602cbbd4191c91766947ff58
+      internalID: -1931213292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3077
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f7bb15a1b7b5d042927ad9336149947
+      internalID: 810746493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3077
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ece14cad2c9fda4e9028f374df0bc41
+      internalID: 1502544491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 3077
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ab52624cf1b9248aab1d05c739df68
+      internalID: -2123170980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 3077
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98e3c9373759bb42b41d555ee3d41ea
+      internalID: 917810240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 3077
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd13bb36696069a45a1ac35fa51afad2
+      internalID: -339271862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1542
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078356a66878a484ca65b3e47d74422b
+      internalID: 1916656957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1542
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d3d6f37ed304b4da6e3e0ae6c4c3b4
+      internalID: 2044604279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1542
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f587b3993c0bf2549a7f4fa551f910c5
+      internalID: 1140795440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 1542
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017008198367f8c489bdb28edb56ccdd
+      internalID: -729958739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 1542
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d959556d921188342998b610b801d807
+      internalID: -1095537391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 1542
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08eb804175e86af4da83453929300416
+      internalID: 1810671004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608a30a420a1a814b97acd9bf48bb689
+      internalID: -924218028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 7
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a79019cb8706324b9051ed4cf3c792a
+      internalID: -70603545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 7
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9372ca906ccbd545a2a41d552258e7f
+      internalID: -641125974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 7
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d380360f14921649bb18624033c27e3
+      internalID: 526599426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 7
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8f3d6e3335a2b4e83141d4dd030b72
+      internalID: 801863640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword Boss Final Spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 7
+        width: 1536
+        height: 1535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f921b35a10c7c469143272081b246a
+      internalID: 414815534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Sword Boss Final Spritesheet_17: 1209122555
+      Sword Boss Final Spritesheet_28: 917810240
+      Sword Boss Final Spritesheet_26: 1502544491
+      Sword Boss Final Spritesheet_0: -586035253
+      Sword Boss Final Spritesheet_33: -729958739
+      Sword Boss Final Spritesheet_32: 1140795440
+      Sword Boss Final Spritesheet_3: 2089687613
+      Sword Boss Final Spritesheet_41: 414815534
+      Sword Boss Final Spritesheet_2: 1712578415
+      Sword Boss Final Spritesheet_9: -1426283941
+      Sword Boss Final Spritesheet_12: 381835664
+      Sword Boss Final Spritesheet_18: 1606149498
+      Sword Boss Final Spritesheet_20: -125659234
+      Sword Boss Final Spritesheet_8: -693949797
+      Sword Boss Final Spritesheet_19: -462953246
+      Sword Boss Final Spritesheet_10: -159311159
+      Sword Boss Final Spritesheet_14: 2076224201
+      Sword Boss Final Spritesheet_27: -2123170980
+      Sword Boss Final Spritesheet_7: 1417474250
+      Sword Boss Final Spritesheet_25: 810746493
+      Sword Boss Final Spritesheet_39: 526599426
+      Sword Boss Final Spritesheet_38: -641125974
+      Sword Boss Final Spritesheet_6: 1135509716
+      Sword Boss Final Spritesheet_16: 373831101
+      Sword Boss Final Spritesheet_22: 1168957641
+      Sword Boss Final Spritesheet_36: -924218028
+      Sword Boss Final Spritesheet_11: 438392092
+      Sword Boss Final Spritesheet_35: 1810671004
+      Sword Boss Final Spritesheet_29: -339271862
+      Sword Boss Final Spritesheet_37: -70603545
+      Sword Boss Final Spritesheet_15: 792369019
+      Sword Boss Final Spritesheet_4: 906050530
+      Sword Boss Final Spritesheet_30: 1916656957
+      Sword Boss Final Spritesheet_23: -734608359
+      Sword Boss Final Spritesheet_40: 801863640
+      Sword Boss Final Spritesheet_1: -1605187100
+      Sword Boss Final Spritesheet_24: -1931213292
+      Sword Boss Final Spritesheet_31: 2044604279
+      Sword Boss Final Spritesheet_34: -1095537391
+      Sword Boss Final Spritesheet_21: 2045070151
+      Sword Boss Final Spritesheet_5: 231424441
+      Sword Boss Final Spritesheet_13: -468018778
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
