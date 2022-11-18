@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public Vector2 Velocity => rigidBody2D.velocity;
 
     public PlayerData PlayerStats;
+    public float Stamina;
 
     [SerializeField] private LayerMask groundLayer;
     
@@ -37,6 +38,8 @@ public class Player : MonoBehaviour
         rigidBody2D = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        Stamina = PlayerStats.Stamina;
     }
 
     void Start()
