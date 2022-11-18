@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public Animator AnimComponent { get; private set; }
     public Rigidbody2D rigidBody2D;
     private BoxCollider2D boxCollider;
+    public SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     private void Awake()
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour
         AnimComponent = GetComponentInChildren<Animator>();
         rigidBody2D = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     void Start()
