@@ -13,12 +13,13 @@ public class Player : MonoBehaviour
     public Vector2 Velocity => rigidBody2D.velocity;
 
     public PlayerData PlayerStats;
+    public float Stamina;
 
     [SerializeField] private LayerMask groundLayer;
     
     // STATES
     public PlayerIdleState IdleState { get; private set; }
-    public PlayerMoveState MoveState { get; private set; }
+    public PlayerMoveState WalkState { get; private set; }
     
     public Animator AnimComponent { get; private set; }
     public Rigidbody2D rigidBody2D;
@@ -36,13 +37,15 @@ public class Player : MonoBehaviour
     {
         stateMachine = new PlayerStateMachine();
         IdleState = new PlayerIdleState(this, stateMachine, "idle");
-        MoveState = new PlayerMoveState(this, stateMachine, "move"); // Later need to change this to running, walking, & jumping
+        WalkState = new PlayerWalkingState(this, stateMachine, "walk");
         
         InputManager = GetComponent<PlayerInputManager>();
         AnimComponent = GetComponentInChildren<Animator>();
         rigidBody2D = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        Stamina = PlayerStats.Stamina;
     }
 
     void Start()

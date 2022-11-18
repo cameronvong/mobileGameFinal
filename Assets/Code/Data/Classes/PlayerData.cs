@@ -12,4 +12,5 @@ public class PlayerData : ScriptableObject {
     public float AttackSpeed = 0.5f;
     public int MaxAttackCombo = 1;
     public float MeleeAttackRange = 1f;
+    public float Stamina = 100f;
 }

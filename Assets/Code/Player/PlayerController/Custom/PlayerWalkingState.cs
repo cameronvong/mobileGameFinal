@@ -8,4 +8,12 @@ public class PlayerWalkingState : PlayerMoveState
     {
         
     }
+
+    protected override void Move()
+    {
+        if(!base.Validate() || movementInput == Vector2.zero)
+            return;
+        player.spriteRenderer.flipX = movementInput.x < 0;
+        SetHorizontalMovement(WalkingSpeedModifier * movementInput.x);
+    }
 }
