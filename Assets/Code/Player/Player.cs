@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         // movementSM.ChangeState(movementSM.IdleState);
-        stateMachine.Initialize(IdleState);
+        stateMachine.Initialize(IdleState, IdleState);
     }
 
     // Update is called once per frame
