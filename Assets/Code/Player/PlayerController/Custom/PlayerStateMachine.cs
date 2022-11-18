@@ -17,8 +17,8 @@ public class PlayerStateMachine : StateMachine<PlayerState>
     public override void ChangeState(PlayerState nextState)
     {
         if(!nextState.Validate()) {
+            currentState?.Exit();
             if(FallbackState != null) {
-                currentState?.Exit();
                 currentState = FallbackState;
                 currentState.Enter();
             }

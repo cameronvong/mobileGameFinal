@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     // STATES
     public PlayerIdleState IdleState { get; private set; }
     public PlayerMoveState WalkState { get; private set; }
+    public PlayerEvadeState DodgeState {get; private set; }
     
     public Animator AnimComponent { get; private set; }
     public Rigidbody2D rigidBody2D;
@@ -69,11 +70,11 @@ public class Player : MonoBehaviour
         return Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .1f, groundLayer);
     }
 
-    private IEnumerator Dash() {
-        checkDash = false;
-        isDashing = true;
-        yield return new WaitForSeconds(dashTime);
-        yield return new WaitForSeconds(dashCD);
-        checkDash = true;
-    }
+    // private IEnumerator Dash() {
+    //     checkDash = false;
+    //     isDashing = true;
+    //     yield return new WaitForSeconds(dashTime);
+    //     yield return new WaitForSeconds(dashCD);
+    //     checkDash = true;
+    // }
 }
