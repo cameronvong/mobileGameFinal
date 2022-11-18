@@ -32,7 +32,8 @@ public class PlayerEvadeState : PlayerGroundedState
     }
 
     public void Execute() {
-        if(!Validate()) return;
+        // if(!Validate()) return;
+        player.Stamina -= 20;
         player.CurrentDashTime = 0f;
         int dashDir = !player.spriteRenderer.flipX ? 1 : -1;
         player.rigidBody2D.velocity = new Vector2(dashDir * DashSpeed, 0f);
@@ -58,6 +59,6 @@ public class PlayerEvadeState : PlayerGroundedState
 
     public override bool Validate() {
         if (!base.Validate()) return false;
-        return player.CurrentDashTime >= DashCooldownTime;
+        return player.Stamina >= 20 && player.CurrentDashTime >= DashCooldownTime;
     }
 }
