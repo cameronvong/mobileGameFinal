@@ -12,6 +12,10 @@ public class PlayerCode : MonoBehaviour
     //bool cooldown = false;
     bool dodging = false;
     bool attacking = false;
+
+    public int maxHealth = 100;
+    public int currentHealth;
+    public HealthBar healthBar;
     Rigidbody2D _rigidbody;
 
     private void Awake()
@@ -23,14 +27,15 @@ public class PlayerCode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
         //we need movement, a dodge [can just be a roll animation and during the roll animation you cant take damage], and a melee attack
+
     }
 
     void FixedUpdate() {
@@ -87,4 +92,10 @@ public class PlayerCode : MonoBehaviour
         dodging = false;
     }
 
+    void TakeDamage(int damage) {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
+
 }
+
