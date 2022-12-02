@@ -7,9 +7,9 @@ namespace AI.BehaviourTree {
     public abstract class BTTree : MonoBehaviour
     {
 
-        protected Rigidbody2D body;
-        protected Animator animator;
-        protected BunnyEventManager eventManager;
+        public Rigidbody2D body;
+        public Animator animator;
+        public BunnyEventManager eventManager;
         private BTNode _root = null;
 
         public virtual void Awake()
@@ -30,7 +30,10 @@ namespace AI.BehaviourTree {
             Debug.Log($"Updating {_root != null}");
             if (_root != null)
                 _root.Evaluate();
+            OnUpdate();
         }
+
+        protected abstract void OnUpdate();
 
         protected abstract BTNode SetupTree();
     }

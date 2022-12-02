@@ -12,6 +12,8 @@ public class SwordBossFloat : BTNode
     public Transform bossTransform;
     public Rigidbody2D body;
 
+    bool changeDirection = false;
+
     public SwordBossFloat(Transform transform, Rigidbody2D rigidBody)
     {
         body = rigidBody;
@@ -23,10 +25,16 @@ public class SwordBossFloat : BTNode
     {
         Debug.Log("Adding force");
         currentHeight = bossTransform.position.y;
-        if (currentHeight <= MaxHeight) {
-            body.AddForce(bossTransform.up * 1.0f);
+        if (currentHeight >= MaxHeight)
+            changeDirection = true;
+
+        if(currentHeight <= 2f)
+            changeDirection = false;
+
+        if (!changeDirection) {
+            body.AddForce(bossTransform.up * 0.2f);
         } else {
-            body.AddForce(bossTransform.up * -1.0f);
+            body.AddForce(bossTransform.up * -0.2f);
         }
         state = BTNodeState.RUNNING;
         return state;

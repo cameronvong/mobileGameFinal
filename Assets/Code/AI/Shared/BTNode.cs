@@ -14,22 +14,22 @@ namespace AI.BehaviourTree {
         protected BTNodeState state;
 
         public BTNode parent;
-        protected List<BTNode> children;
+        protected List<BTNode> children = new List<BTNode>();
 
         private Dictionary<string, object> _dataContext = new Dictionary<string, object>();
 
         public BTNode() { parent = null; }
 
-        public BTNode(List<BTNode> kids)
+        public BTNode(List<BTNode> children)
         {
-            foreach (BTNode child in kids)
+            foreach (BTNode child in children)
                 _Attach(child);
         }
 
         private void _Attach(BTNode node)
         {
             node.parent = this;
-            children.Add(this);
+            children.Add(node);
         }
 
         public virtual BTNodeState Evaluate() => BTNodeState.FAILURE;

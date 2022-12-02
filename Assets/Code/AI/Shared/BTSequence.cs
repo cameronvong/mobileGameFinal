@@ -19,10 +19,10 @@ namespace AI.BehaviourTree {
                     case BTNodeState.FAILURE:
                         state = BTNodeState.FAILURE;
                         return state; 
+                    case BTNodeState.SUCCESS:
+                        continue;
                     case BTNodeState.RUNNING:
                         anyChildIsRunning = true;
-                        continue;
-                    case BTNodeState.SUCCESS:
                         continue;
                     default:
                         state = BTNodeState.SUCCESS;
