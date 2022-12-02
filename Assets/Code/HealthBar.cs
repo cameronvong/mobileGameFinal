@@ -18,6 +18,8 @@ public class HealthBar : MonoBehaviour
         BunnyEventManager.Instance.RegisterEvent("OnPlayerHurt", this);
         slider = GetComponent<Slider>();
         fill = GetComponentInChildren<Image>();
+        slider.maxValue = Statistics.MaxHealth;
+        slider.value = Statistics.MaxHealth;
     }
 
     void Start()
@@ -35,6 +37,7 @@ public class HealthBar : MonoBehaviour
     public void SetHealth(float health)
     {
         slider.value = health;
+        Debug.Log($"Slider's new value is {slider.value}");
     }
 
     public void OnPlayerHurt(BunnyMessage<float> message)
