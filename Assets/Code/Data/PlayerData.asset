@@ -23,4 +23,4 @@ MonoBehaviour:
   Stamina: 100
   DashCooldownTime: 1.2
   DashTime: 0.4
-  DashSpeed: 10
+  DashSpeed: 30

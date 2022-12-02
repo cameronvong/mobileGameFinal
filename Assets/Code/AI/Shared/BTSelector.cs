@@ -4,32 +4,29 @@ using UnityEngine;
 
 
 namespace AI.BehaviourTree {
-    public class BTSequence : BTNode
+    public class BTSelector : BTNode
     {
-        public BTSequence(): base() {}
-        public BTSequence(List<BTNode> children): base(children) {}
+        public BTSelector(): base() {}
+        public BTSelector(List<BTNode> children): base(children) {}
         public override BTNodeState Evaluate()
         {
-            bool anyChildIsRunning = false;
-
             foreach (BTNode node in children)
             {
                 switch(node.Evaluate())
                 {
                     case BTNodeState.FAILURE:
-                        state = BTNodeState.FAILURE;
-                        return state; 
+                        continue; 
                     case BTNodeState.SUCCESS:
-                        continue;
-                    case BTNodeState.RUNNING:
-                        anyChildIsRunning = true;
-                        continue;
-                    default:
                         state = BTNodeState.SUCCESS;
                         return state;
+                    case BTNodeState.RUNNING:
+                        state = BTNodeState.RUNNING;
+                        continue;
+                    default:
+                        continue;
                 } 
             }
-            state = anyChildIsRunning ? BTNodeState.RUNNING : BTNodeState.SUCCESS;
+            state = BTNodeState.FAILURE;
             return state;
         }
     }

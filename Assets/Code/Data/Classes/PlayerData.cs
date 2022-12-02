@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerData", menuName = "GameData/PlayerData", order = 0)]
 public class PlayerData : ScriptableObject {
     public float Health = 100f;
+    public float MaxHealth = 100f;
     public float WalkingSpeed = 5f;
     public float RunningSpeed = 10f;
     public float BaseMeleeDamage = 5f;

@@ -12,15 +12,12 @@ public class PlayerAttackState : PlayerMoveState
         statePriority = 10;
     }
 
-    public override void PhysicsUpdate()
+    protected override void Move()
     {
-        base.PhysicsUpdate();
-        if(movementInput.x == 0f)
-        {
-            // stateMachine.ChangeState(player.IdleState);
-        } else {
-            Move();
-        }
+        if(!Validate() || movementInput == Vector2.zero)
+            return;
+        // player.spriteRenderer.flipX = movementInput.x < 0;
+        SetHorizontalMovement(WalkingSpeedModifier * movementInput.x);
     }
 
     private IEnumerator HandleAnim() {
