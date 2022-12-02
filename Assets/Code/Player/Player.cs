@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
 
     public float Stamina;
 
-    public HealthBar healthBar;
+    public float Health;
     public float CurrentAttackTime;
 
     [SerializeField] private LayerMask groundLayer;
@@ -37,7 +37,8 @@ public class Player : MonoBehaviour
     public float CurrentDashTime;
     public float GeneralLocalTime = 1f;
 
-    Action<BunnyMessage<float>> onPlayerAttacked;
+    // Events & Callbacks
+    Action<BunnyMessage<float>> OnPlayerAttacked;
 
 
     // Start is called before the first frame update
@@ -56,21 +57,20 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
         Stamina = PlayerStats.Stamina;
+        Health = PlayerStats.MaxHealth;
         CurrentDashTime = PlayerStats.DashCooldownTime;
         CurrentAttackTime = 1f/PlayerStats.AttackSpeed;
 
         BunnyEventManager.Instance.RegisterEvent("DamagePlayerRequest", this);
-
     }
 
     void Start()
     {
         // movementSM.ChangeState(movementSM.IdleState);
         stateMachine.Initialize(IdleState, IdleState);
-        BunnyEventManager.Instance.Fire<string>("6740a1d6-3741-45ad-9e0b-f6dd910716b6", new BunnyMessage<string>("6740a1d6-3741-45ad-9e0b-f6dd910716b6", this));
 
-        onPlayerAttacked = DamagePlayer;
-        BunnyEventManager.Instance.OnEventRaised<float>("DamageBossRequest", onPlayerAttacked);
+        OnPlayerAttacked = PlayerAttack;
+        BunnyEventManager.Instance.OnEventRaised<float>("DamagePlayerRequest", OnPlayerAttacked);
     }
 
     // Update is called once per frame
@@ -118,17 +118,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    void DamagePlayer(BunnyMessage<float> message)
+    public void PlayerAttack(BunnyMessage<float> message)
     {
-        PlayerStats.Health -= message.payload;
-        healthBar.SetHealth(PlayerStats.Health);
+        if (stateMachine.currentState != DodgeState) {
+            Health -= message.payload;
+            BunnyEventManager.Instance.Fire<float>("OnPlayerHurt", new BunnyMessage<float>(Health, this));
+        }
     }
-
-    // private IEnumerator Dash() {
-    //     checkDash = false;
-    //     isDashing = true;
-    //     yield return new WaitForSeconds(dashTime);
-    //     yield return new WaitForSeconds(dashCD);
-    //     checkDash = true;
-    // }
 }

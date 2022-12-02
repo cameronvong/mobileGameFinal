@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Bunny.Tools;
 
 public class AbstractProjectile : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class AbstractProjectile : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             // Do something
+            BunnyEventManager.Instance.Fire<float>("DamagePlayerRequest", new BunnyMessage<float>(10f, this));
         }
     }
 
