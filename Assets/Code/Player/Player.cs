@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,7 @@ public class Player : MonoBehaviour
     public Vector2 Velocity => rigidBody2D.velocity;
 
     public PlayerData PlayerStats;
+
     public float Stamina;
     public float CurrentAttackTime;
 
@@ -32,6 +34,9 @@ public class Player : MonoBehaviour
 
     public float CurrentDashTime;
     public float GeneralLocalTime = 1f;
+
+    Action<BunnyMessage<float>> onPlayerAttacked;
+
 
     // Start is called before the first frame update
     private void Awake()
@@ -103,6 +108,11 @@ public class Player : MonoBehaviour
         {
            BunnyEventManager.Instance.Fire<float>("DamageBossRequest", new BunnyMessage<float>(10f, this));
         }
+    }
+
+    void DamagePlayer(BunnyMessage<float> message)
+    {
+        PlayerStats.Health -= message.payload;
     }
 
     // private IEnumerator Dash() {
