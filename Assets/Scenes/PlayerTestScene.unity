@@ -668,7 +668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BossData: {fileID: 11400000, guid: c8647f8e95d10224aa86dfc2ee163a16, type: 2}
-  Health: 0
+  Health: 100
 --- !u!1 &1813997884
 GameObject:
   m_ObjectHideFlags: 0
