@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,6 +34,11 @@ public class Player : MonoBehaviour
     public float CurrentDashTime;
     public float GeneralLocalTime = 1f;
 
+    public HealthBar healthBar;
+    Action<BunnyMessage<float>> onPlayerAttacked;
+
+
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -51,6 +57,9 @@ public class Player : MonoBehaviour
         Stamina = PlayerStats.Stamina;
         CurrentDashTime = PlayerStats.DashCooldownTime;
         CurrentAttackTime = 1f/PlayerStats.AttackSpeed;
+
+        BunnyEventManager.Instance.RegisterEvent("DamagePlayerRequest", this);
+
     }
 
     void Start()
@@ -58,6 +67,8 @@ public class Player : MonoBehaviour
         // movementSM.ChangeState(movementSM.IdleState);
         stateMachine.Initialize(IdleState, IdleState);
         BunnyEventManager.Instance.Fire<string>("6740a1d6-3741-45ad-9e0b-f6dd910716b6", new BunnyMessage<string>("6740a1d6-3741-45ad-9e0b-f6dd910716b6", this));
+        onPlayerAttacked = DamagePlayer;
+        BunnyEventManager.Instance.OnEventRaised<float>("DamagePlayerRequest", onPlayerAttacked);
     }
 
     // Update is called once per frame
@@ -103,6 +114,13 @@ public class Player : MonoBehaviour
         {
            BunnyEventManager.Instance.Fire<float>("DamageBossRequest", new BunnyMessage<float>(10f, this));
         }
+    }
+
+    void DamagePlayer(BunnyMessage<float> message)
+    {
+        PlayerStats.Health -= message.payload;
+        healthBar.SetHealth(PlayerStats.Health);
+
     }
 
     // private IEnumerator Dash() {
