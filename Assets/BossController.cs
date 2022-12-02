@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Bunny.Tools;
 
 public class BossController : MonoBehaviour
 {

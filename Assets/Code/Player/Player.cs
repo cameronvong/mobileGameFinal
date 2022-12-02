@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Jin.PlayerControllerMachine.States;
+using Bunny.Tools;
 
 [RequireComponent(typeof(PlayerInputManager))]
 public class Player : MonoBehaviour
@@ -56,6 +57,7 @@ public class Player : MonoBehaviour
     {
         // movementSM.ChangeState(movementSM.IdleState);
         stateMachine.Initialize(IdleState, IdleState);
+        BunnyEventManager.Instance.Fire<string>("6740a1d6-3741-45ad-9e0b-f6dd910716b6", new BunnyMessage<string>("6740a1d6-3741-45ad-9e0b-f6dd910716b6", this));
     }
 
     // Update is called once per frame
