@@ -14,7 +14,7 @@ namespace AI.BehaviourTree {
         protected BTNodeState state;
 
         public BTNode parent;
-        protected List<BTNode> children = new List<BTNode>();
+        protected List<BTNode> children;
 
         private Dictionary<string, object> _dataContext = new Dictionary<string, object>();
 

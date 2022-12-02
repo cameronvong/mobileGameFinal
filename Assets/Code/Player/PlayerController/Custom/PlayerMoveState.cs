@@ -14,7 +14,7 @@ public class PlayerMoveState : PlayerGroundedState
     {
         WalkingSpeedModifier = player.PlayerStats.WalkingSpeed;
         RunningSpeedModifier = player.PlayerStats.RunningSpeed;
-        statePriority = 999;
+        // statePriority = 999;
     }
 
     public override void PhysicsUpdate()
@@ -24,8 +24,7 @@ public class PlayerMoveState : PlayerGroundedState
         {
             stateMachine.ChangeState(player.IdleState);
         } else {
-            Debug.Log($"{movementInput.normalized.x}");
-            ShouldFlip(movementInput.normalized.x);
+            // Debug.Log($"{movementInput.normalized.x}");
             Move();
         }
     }
@@ -35,12 +34,17 @@ public class PlayerMoveState : PlayerGroundedState
         if(!base.Validate() || movementInput == Vector2.zero)
             return;
         // player.spriteRenderer.flipX = movementInput.x < 0;
+        Debug.Log($"Move vecotr {WalkingSpeedModifier * movementInput.x}");
         SetHorizontalMovement(WalkingSpeedModifier * movementInput.x);
     }
 
     protected virtual void SetHorizontalMovement(float velocityX)
     {
+        // Debug.Log("Velocity should be ");
         WorkspaceMovementVector.Set(velocityX, player.Velocity.y);
+        ShouldFlip(movementInput.normalized.x);
+        // Debug.Log($"New force {WorkspaceMovementVector}");
+        // player.rigidBody2D.AddForce(WorkspaceMovementVector * 100, ForceMode2D.Force);
         player.rigidBody2D.velocity = WorkspaceMovementVector;
     }
 
@@ -56,10 +60,8 @@ public class PlayerMoveState : PlayerGroundedState
     {
         FacingDirection *= -1;
         Debug.Log($"Flipped! {FacingDirection}");
-        // FacingDirection *= -1;
         player.spriteRenderer.flipX = FacingDirection == -1;
-        var opposite = -player.rigidBody2D.velocity;
-        player.rigidBody2D.AddForce(opposite * Time.deltaTime);
-        // player.transform.Rotate(0.0f, 180f, 0.0f);
+        // player.rigidBody2D.velocity -= player.rigidBody2D.velocity;
+        // var opposite = -player.rigidBody2D.velocity;
     }
 }

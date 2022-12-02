@@ -57,7 +57,7 @@ public class PlayerRunningState : PlayerMoveState
     {
         if(!Validate() || movementInput == Vector2.zero)
             return;
-        player.spriteRenderer.flipX = movementInput.x < 0;
+        // player.spriteRenderer.flipX = movementInput.x < 0;
         SetHorizontalMovement(RunningSpeedModifier * movementInput.x);
     }
 }

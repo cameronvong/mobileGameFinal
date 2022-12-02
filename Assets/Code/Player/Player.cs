@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
         Debug.Log("Attacking");
         stateMachine.ChangeState(AttackState);
         GameObject obj = GameObject.FindWithTag("Boss");
-        Debug.Log($"Distance is: {Vector3.Distance(obj.transform.position, transform.position)}");
+        // Debug.Log($"Distance is: {Vector3.Distance(obj.transform.position, transform.position)}");
         if (Vector3.Distance(obj.transform.position, transform.position) <= PlayerStats.MeleeAttackRange)
         {
            BunnyEventManager.Instance.Fire<float>("DamageBossRequest", new BunnyMessage<float>(10f, this));
