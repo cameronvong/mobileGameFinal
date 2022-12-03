@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     public PlayerMoveState WalkState { get; private set; }
     public PlayerEvadeState DodgeState { get; private set; }
     public PlayerAttackState AttackState {  get; private set; }
+    public PlayerDeathState DeathState { get; private set; }
     
     public Animator AnimComponent { get; private set; }
     public Rigidbody2D rigidBody2D;
@@ -49,6 +50,7 @@ public class Player : MonoBehaviour
         WalkState = new PlayerWalkingState(this, stateMachine, "walk");
         DodgeState = new PlayerEvadeState(this, stateMachine, "dodge");
         AttackState = new PlayerAttackState(this, stateMachine, "attack");
+        DeathState = new PlayerDeathState(this, stateMachine, "death");
         
         InputManager = GetComponent<PlayerInputManager>();
         AnimComponent = GetComponentInChildren<Animator>();
@@ -69,7 +71,7 @@ public class Player : MonoBehaviour
         // movementSM.ChangeState(movementSM.IdleState);
         stateMachine.Initialize(IdleState, IdleState);
 
-        OnPlayerAttacked = PlayerAttack;
+        OnPlayerAttacked = PlayerAttacked;
         BunnyEventManager.Instance.OnEventRaised<float>("DamagePlayerRequest", OnPlayerAttacked);
     }
 
@@ -79,7 +81,13 @@ public class Player : MonoBehaviour
         stateMachine.HandleInput();
         stateMachine.Update();
         CurrentDashTime += Time.deltaTime;
+
+        if (Health <= 0 && stateMachine.currentState != DeathState)
+        {
+            stateMachine.ChangeState(DeathState);
+        }
         Debug.Log($"Current state: {stateMachine.currentState}");
+        
     }
 
     private void FixedUpdate() 
@@ -118,10 +126,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void PlayerAttack(BunnyMessage<float> message)
+    public void PlayerAttacked(BunnyMessage<float> message)
     {
-        if (stateMachine.currentState != DodgeState) {
+        if (stateMachine.currentState != DodgeState && Health > 0) {
             Health -= message.payload;
+            Health = Math.Max(Health, 0);
             BunnyEventManager.Instance.Fire<float>("OnPlayerHurt", new BunnyMessage<float>(Health, this));
         }
     }

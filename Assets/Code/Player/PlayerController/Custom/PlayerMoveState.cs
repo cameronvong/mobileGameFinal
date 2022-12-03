@@ -23,7 +23,18 @@ public class PlayerMoveState : PlayerGroundedState
         {
             stateMachine.ChangeState(player.IdleState);
         } else {
+            Jump();
             Move();
+        }
+    }
+
+    protected virtual void Jump()
+    {
+        Debug.Log($"Y input is {movementInput.y}, {player.IsGrounded()}");
+        if (player.IsGrounded() && movementInput.y >= 0.5)
+        {
+            Debug.Log("Jumping");
+            player.rigidBody2D.velocity += new Vector2(0, player.PlayerStats.JumpForce * 0.2f);
         }
     }
 
@@ -31,7 +42,7 @@ public class PlayerMoveState : PlayerGroundedState
     {
         if(!base.Validate() || movementInput == Vector2.zero)
             return;
-        Debug.Log($"Move vecotr {WalkingSpeedModifier * movementInput.x}");
+        Debug.Log($"Move vector {WalkingSpeedModifier * movementInput.x}");
         SetHorizontalMovement(WalkingSpeedModifier * movementInput.x);
     }
 

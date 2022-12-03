@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   Health: 100
+  MaxHealth: 100
   WalkingSpeed: 5
   RunningSpeed: 10
   BaseMeleeDamage: 5
@@ -24,3 +25,4 @@ MonoBehaviour:
   DashCooldownTime: 1.2
   DashTime: 0.4
   DashSpeed: 30
+  JumpForce: 100

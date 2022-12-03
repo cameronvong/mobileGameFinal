@@ -17,4 +17,5 @@ public class PlayerData : ScriptableObject {
     public float DashCooldownTime = 1.2f;
     public float DashTime = 0.4f;
     public float DashSpeed = 10f;
+    public float JumpForce = 10f;
 }
