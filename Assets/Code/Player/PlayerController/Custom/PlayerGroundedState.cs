@@ -34,7 +34,8 @@ public class PlayerGroundedState : PlayerState
     }
 
     public override bool Validate() {
-        return player.IsGrounded();
+        // return player.IsGrounded();
+        return true;
     }
 
     public PlayerGroundedState(Player player, PlayerStateMachine stateMachine, string animationName) : base(player, stateMachine, animationName)

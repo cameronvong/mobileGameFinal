@@ -21,6 +21,7 @@ public class PlayerStateMachine : StateMachine<PlayerState>
     {
         if(PerformingAction && nextState.GetStatePriority() <= currentState.GetStatePriority()) return;
         // if(currentState != null && currentState.IsAction()) return;
+        Debug.Log($"Changing state {nextState}");
         currentState?.Exit();
         PreviousState = currentState;
         if(!nextState.Validate()) {

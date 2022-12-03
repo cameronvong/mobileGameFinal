@@ -23,7 +23,7 @@ public class SwordBossSMRun : BTNode
     private IEnumerator SpawnSpecialAttack()
     {
         specialAttacking = true;
-        for(int i = 0; i < 5; i++)
+        for(int i = 0; i < 10; i++)
         {
             yield return new WaitForSeconds((float) Random.Range(0.5f, 1f));
             SpawnSword();
