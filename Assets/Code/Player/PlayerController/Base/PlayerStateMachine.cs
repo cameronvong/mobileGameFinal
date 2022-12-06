@@ -35,6 +35,11 @@ public class PlayerStateMachine : StateMachine<PlayerState>
         currentState.Enter();
     }
 
+    public void Fallback()
+    {
+        ChangeState(FallbackState);
+    }
+
     public virtual void ForceChangeState(PlayerState nextState) {
         base.ChangeState(nextState);
     }

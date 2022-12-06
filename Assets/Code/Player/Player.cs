@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
     public PlayerEvadeState DodgeState { get; private set; }
     public PlayerAttackState AttackState {  get; private set; }
     public PlayerDeathState DeathState { get; private set; }
+    public PlayerHurtState HurtState { get; private set; }
     
     public Animator AnimComponent { get; private set; }
     public Rigidbody2D rigidBody2D;
@@ -51,6 +52,7 @@ public class Player : MonoBehaviour
         DodgeState = new PlayerEvadeState(this, stateMachine, "dodge");
         AttackState = new PlayerAttackState(this, stateMachine, "attack");
         DeathState = new PlayerDeathState(this, stateMachine, "death");
+        HurtState = new PlayerHurtState(this, stateMachine, "hurt");
         
         InputManager = GetComponent<PlayerInputManager>();
         AnimComponent = GetComponentInChildren<Animator>();
@@ -132,7 +134,12 @@ public class Player : MonoBehaviour
 
     public void PlayerAttacked(BunnyMessage<float> message)
     {
-        if (stateMachine.currentState != DodgeState && Health > 0) {
+        if (
+            stateMachine.currentState != DodgeState
+            && Health > 0
+            && stateMachine.currentState != HurtState
+        ) {
+            stateMachine.ChangeState(HurtState);
             Health -= message.payload;
             Health = Math.Max(Health, 0);
             BunnyEventManager.Instance.Fire<float>("OnPlayerHurt", new BunnyMessage<float>(Health, this));

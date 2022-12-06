@@ -17,6 +17,8 @@ public class SwordBossGroundStuck : BTNode
         yield return new WaitForSeconds(3);
         boss.DefaultAttackTimer = 0f;
         state = BTNodeState.SUCCESS;
+        parent.parent.DeleteData("plunged");
+        parent.parent.DeleteData("target");
     }
 
     public override BTNodeState Evaluate()

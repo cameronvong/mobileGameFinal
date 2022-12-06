@@ -17,6 +17,8 @@ public class SwordBossBT: BTTree
 
     Action<BunnyMessage<float>> onAttackedCallback;
 
+    public bool CollisionAttacking = false;
+
     // Stats
     public float Health;
 
@@ -74,6 +76,13 @@ public class SwordBossBT: BTTree
         if (Health <= 0) {
             BunnyEventManager.Instance.Fire<bool>("OnSwordBossDied", new BunnyMessage<bool>(true, this));
             Health = 0;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.tag == "Player" && CollisionAttacking)
+        {
+            BunnyEventManager.Instance.Fire<float>("DamagePlayerRequest", new BunnyMessage<float>(10f, this));
         }
     }
 }
