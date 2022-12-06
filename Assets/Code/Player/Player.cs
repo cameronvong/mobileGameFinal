@@ -98,6 +98,7 @@ public class Player : MonoBehaviour
 
         if(GeneralLocalTime >= 1f)
         {
+            GeneralLocalTime = 0f;
             if(Stamina < 100) 
             {
                 Stamina += 5;
@@ -120,7 +121,10 @@ public class Player : MonoBehaviour
         stateMachine.ChangeState(AttackState);
         GameObject obj = GameObject.FindWithTag("Boss");
         // Debug.Log($"Distance is: {Vector3.Distance(obj.transform.position, transform.position)}");
-        if (Vector3.Distance(obj.transform.position, transform.position) <= PlayerStats.MeleeAttackRange)
+        if (
+            Vector3.Distance(obj.transform.position, transform.position) <= PlayerStats.MeleeAttackRange
+            && stateMachine.currentState == AttackState
+        )
         {
            BunnyEventManager.Instance.Fire<float>("DamageBossRequest", new BunnyMessage<float>(10f, this));
         }

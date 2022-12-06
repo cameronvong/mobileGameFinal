@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: SwordBossData
   m_EditorClassIdentifier: 
   Health: 100
-  WalkingSpeed: 5
+  WalkingSpeed: 2
   RunningSpeed: 10
   BaseMeleeDamage: 5
   BaseRangeDamage: 5
   MaxAttackCombo: 1
   AttackSpeed: 1.5
-  AttackCooldown: 1
+  AttackCooldown: 10
   SpecialAttackCooldown: 30
   MeleeAttackRange: 1
   RangeAttackRange: 10
