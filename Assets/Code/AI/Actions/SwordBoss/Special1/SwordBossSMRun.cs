@@ -36,7 +36,6 @@ public class SwordBossSMRun : BTNode
     {
         // Debug.Log($"Attempt to eval {t != null} {parent}");
 
-        Debug.Log("Spawning swords");
         if (!specialAttacking) {
             boss.StartCoroutine(SpawnSpecialAttack());
         }

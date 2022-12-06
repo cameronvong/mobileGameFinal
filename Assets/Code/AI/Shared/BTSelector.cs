@@ -21,7 +21,7 @@ namespace AI.BehaviourTree {
                         return state;
                     case BTNodeState.RUNNING:
                         state = BTNodeState.RUNNING;
-                        continue;
+                        return state;
                     default:
                         continue;
                 } 

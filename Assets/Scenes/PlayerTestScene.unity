@@ -169,6 +169,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 768254367}
     - target: {fileID: 640204157423249824, guid: f9280e0449da1a449bfa531f0fc21ab0, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 722879162}
+    - target: {fileID: 640204157423249824, guid: f9280e0449da1a449bfa531f0fc21ab0, type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 640204157423249824, guid: f9280e0449da1a449bfa531f0fc21ab0, type: 3}
       propertyPath: FallingSwordPrefab
       value: 
       objectReference: {fileID: 8379256260888311117, guid: a3ac13d0634da794a82bcf3aa0436f55, type: 3}
@@ -659,6 +667,7 @@ GameObject:
   - component: {fileID: 1103489117}
   - component: {fileID: 1103489116}
   - component: {fileID: 1103489115}
+  - component: {fileID: 1103489118}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -733,6 +742,62 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1103489118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103489114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 065d1e328cd0e14488f949e11ef357ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: 0
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.22595784
+      value: 0.1495106
+      inSlope: -0.027366158
+      outSlope: -0.027366158
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.67681676
+      value: 0.097519964
+      inSlope: -0.18548791
+      outSlope: -0.18548791
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.3914992
+      value: 0.0023318422
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  duration: 0
 --- !u!1 &1220557728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,7 +1371,7 @@ GameObject:
   - component: {fileID: 1832708400}
   - component: {fileID: 1832708402}
   - component: {fileID: 1832708401}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1638,7 +1703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4908200592680879237, guid: 4c9ac8a9a7ebaae4a90d8fc1b4a46cfd, type: 3}
       propertyPath: m_Mass
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4908200592680879237, guid: 4c9ac8a9a7ebaae4a90d8fc1b4a46cfd, type: 3}
       propertyPath: m_LinearDrag
@@ -1647,6 +1712,10 @@ PrefabInstance:
     - target: {fileID: 4908200592680879237, guid: 4c9ac8a9a7ebaae4a90d8fc1b4a46cfd, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908200592680879237, guid: 4c9ac8a9a7ebaae4a90d8fc1b4a46cfd, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4908200592680879238, guid: 4c9ac8a9a7ebaae4a90d8fc1b4a46cfd, type: 3}
       propertyPath: m_Controller
@@ -1663,6 +1732,10 @@ PrefabInstance:
     - target: {fileID: 4908200592680879259, guid: 4c9ac8a9a7ebaae4a90d8fc1b4a46cfd, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908200592680879259, guid: 4c9ac8a9a7ebaae4a90d8fc1b4a46cfd, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4908200592680879259, guid: 4c9ac8a9a7ebaae4a90d8fc1b4a46cfd, type: 3}
       propertyPath: m_TagString

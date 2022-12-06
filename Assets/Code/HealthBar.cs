@@ -37,7 +37,6 @@ public class HealthBar : MonoBehaviour
     public void SetHealth(float health)
     {
         slider.value = health;
-        Debug.Log($"Slider's new value is {slider.value}");
     }
 
     public void OnPlayerHurt(BunnyMessage<float> message)

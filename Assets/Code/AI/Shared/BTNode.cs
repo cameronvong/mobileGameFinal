@@ -36,7 +36,9 @@ namespace AI.BehaviourTree {
 
         public void SetData(string key, object value)
         {
-            _dataContext[key] = value;
+            Debug.Log("adding key" + key);
+            _dataContext.Add(key, value);
+            // _dataContext[key] = value;
         }
 
         public object GetData(string key)

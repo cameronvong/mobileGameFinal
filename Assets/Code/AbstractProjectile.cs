@@ -20,7 +20,6 @@ public class AbstractProjectile : MonoBehaviour
 
      void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("Collided with" + col.gameObject.tag);
         if (col.gameObject.tag == "Player")
         {
             // Do something
