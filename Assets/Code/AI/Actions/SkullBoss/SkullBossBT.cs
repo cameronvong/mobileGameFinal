@@ -6,7 +6,7 @@ using AI.BehaviourTree;
 using Bunny;
 using Bunny.Tools;
 
-public class DragonEyeBT: BTTree
+public class SkullBossBT: BTTree
 {
     public AIData BossData;
     public float SpecialTimer;

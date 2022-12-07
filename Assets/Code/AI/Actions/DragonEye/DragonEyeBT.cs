@@ -6,7 +6,7 @@ using AI.BehaviourTree;
 using Bunny;
 using Bunny.Tools;
 
-public class SkullBossBT: BTTree
+public class DragonEyeBT: BTTree
 {
     public AIData BossData;
     public float SpecialTimer;
@@ -23,7 +23,7 @@ public class SkullBossBT: BTTree
     public float Health;
 
     // Special 1
-    public GameObject SkullProjectile;
+    public GameObject DEProjectile;
 
     protected override BTNode SetupTree()
     {
@@ -31,15 +31,17 @@ public class SkullBossBT: BTTree
         SpecialTimer = 0f;
         DefaultAttackTimer = 0f;
 
-        body.velocity = new Vector2(10f, 10f);
-
         onAttackedCallback = OnAttacked; 
-        BunnyEventManager.Instance.RegisterEvent("OnSkullBossDied", this);
+        BunnyEventManager.Instance.RegisterEvent("OnDragonEyeDied", this);
+        BunnyEventManager.Instance.RegisterEvent("DamageBossRequest", this);
         BunnyEventManager.Instance.OnEventRaised<float>("DamageBossRequest", onAttackedCallback);
+
+        body.velocity = new Vector2(BossData.RunningSpeed, BossData.RunningSpeed);
 
         BTNode root = new BTSelector(new List<BTNode>
         {
-            
+            new DEDeath(this),
+            new DEShoot(this),
         });
         return root;
     }
@@ -56,7 +58,7 @@ public class SkullBossBT: BTTree
         BunnyEventManager.Instance.Fire<float>("OnBossHurt", new BunnyMessage<float>(Health, this));
 
         if (Health <= 0) {
-            BunnyEventManager.Instance.Fire<bool>("OnSkullBossDied", new BunnyMessage<bool>(true, this));
+            BunnyEventManager.Instance.Fire<bool>("OnDragonEyeDied", new BunnyMessage<bool>(true, this));
             Health = 0;
         }
     }
