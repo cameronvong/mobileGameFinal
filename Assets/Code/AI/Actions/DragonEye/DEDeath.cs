@@ -16,7 +16,7 @@ public class DEDeath : BTNode
     {
         if (boss.Health <= 0)
         {
-            boss.GetComponent<BoxCollider2D>().isTrigger = true;
+            boss.physicsCollider.isTrigger = true;
             boss.body.AddForce(boss.transform.up * -10f);
             state = BTNodeState.SUCCESS;
             return state;

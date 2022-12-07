@@ -12,7 +12,6 @@ public class SwordBossBT: BTTree
     public float SpecialTimer;
     public float DefaultAttackTimer;
 
-    public Player target;
     public LayerMask playerMask;
 
     Action<BunnyMessage<float>> onAttackedCallback;

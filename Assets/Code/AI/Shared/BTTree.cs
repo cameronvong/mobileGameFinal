@@ -8,14 +8,18 @@ namespace AI.BehaviourTree {
     {
 
         public Rigidbody2D body;
+        public AIData GeneralData;
         public Animator animator;
         public BunnyEventManager eventManager;
+        public SpriteRenderer spriteRenderer;
+        public Player target;
         private BTNode _root = null;
 
         public virtual void Awake()
         {
             body = GetComponent<Rigidbody2D>();
             animator = gameObject.GetComponentInChildren<Animator>();
+            spriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
             eventManager = BunnyEventManager.Instance;
         }
 

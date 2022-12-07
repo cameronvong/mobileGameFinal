@@ -8,11 +8,9 @@ using Bunny.Tools;
 
 public class SkullBossBT: BTTree
 {
-    public AIData BossData;
     public float SpecialTimer;
     public float DefaultAttackTimer;
 
-    public Player target;
     public LayerMask playerMask;
 
     Action<BunnyMessage<float>> onAttackedCallback;
@@ -22,12 +20,9 @@ public class SkullBossBT: BTTree
     // Stats
     public float Health;
 
-    // Special 1
-    public GameObject SkullProjectile;
-
     protected override BTNode SetupTree()
     {
-        Health = BossData.Health;
+        Health = GeneralData.Health;
         SpecialTimer = 0f;
         DefaultAttackTimer = 0f;
 
@@ -39,7 +34,11 @@ public class SkullBossBT: BTTree
 
         BTNode root = new BTSelector(new List<BTNode>
         {
-            
+            new BTSequence(new List<BTNode>
+            {
+                new BTFacePlayer(this),
+                new BTMoveTowardsPlayer(this),
+            }),
         });
         return root;
     }
