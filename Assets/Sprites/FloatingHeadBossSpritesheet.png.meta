@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,7 +139,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: FloatingHeadBossSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3972
+        width: 1980
+        height: 1980
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7c45014cce0ef40bc2a11c60138f9e
+      internalID: -1232921570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingHeadBossSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 3972
+        width: 1980
+        height: 1980
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb9e9d48ea34894484833da5bbff0b1
+      internalID: -1186732522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingHeadBossSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 3972
+        width: 1980
+        height: 1980
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93995960d0433714b9127d1689f221e2
+      internalID: 789667247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingHeadBossSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1992
+        width: 1980
+        height: 1980
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95cdd942232e89e4390da758b068bb23
+      internalID: -64013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingHeadBossSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1992
+        width: 1980
+        height: 1980
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0baf70c0a131a3d4e9f80ca457ef9aed
+      internalID: 1079170617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingHeadBossSpritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 1992
+        width: 1980
+        height: 1980
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab35e7b8bb562b4c9a653c0c554a14f
+      internalID: -1363759086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingHeadBossSpritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 1980
+        height: 1980
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918dfcdf9fe0ea1488a557900fd4a9a7
+      internalID: -946660796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingHeadBossSpritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 12
+        width: 1980
+        height: 1980
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de78147555eca1e41aefae025337129f
+      internalID: 651302556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -150,7 +318,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FloatingHeadBossSpritesheet_4: 1079170617
+      FloatingHeadBossSpritesheet_6: -946660796
+      FloatingHeadBossSpritesheet_1: -1186732522
+      FloatingHeadBossSpritesheet_5: -1363759086
+      FloatingHeadBossSpritesheet_2: 789667247
+      FloatingHeadBossSpritesheet_3: -64013
+      FloatingHeadBossSpritesheet_7: 651302556
+      FloatingHeadBossSpritesheet_0: -1232921570
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
