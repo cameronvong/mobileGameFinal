@@ -16,11 +16,6 @@ public class SwordBossBT: BTTree
 
     Action<BunnyMessage<float>> onAttackedCallback;
 
-    public bool CollisionAttacking = false;
-
-    // Stats
-    public float Health;
-
     // Special 1
     public Collider2D SpawnAreaCollider;
     public GameObject FallingSwordPrefab;

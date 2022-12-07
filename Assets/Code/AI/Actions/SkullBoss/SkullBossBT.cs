@@ -8,36 +8,33 @@ using Bunny.Tools;
 
 public class SkullBossBT: BTTree
 {
-    public float SpecialTimer;
-    public float DefaultAttackTimer;
-
     public LayerMask playerMask;
 
     Action<BunnyMessage<float>> onAttackedCallback;
 
-    public bool CollisionAttacking = false;
-
-    // Stats
-    public float Health;
-
     protected override BTNode SetupTree()
     {
-        Health = GeneralData.Health;
-        SpecialTimer = 0f;
-        DefaultAttackTimer = 0f;
-
         body.velocity = new Vector2(10f, 10f);
 
         onAttackedCallback = OnAttacked; 
         BunnyEventManager.Instance.RegisterEvent("OnSkullBossDied", this);
+        BunnyEventManager.Instance.RegisterEvent("DamageBossRequest", this);
         BunnyEventManager.Instance.OnEventRaised<float>("DamageBossRequest", onAttackedCallback);
 
         BTNode root = new BTSelector(new List<BTNode>
         {
+            new SBDeath(this),
+            new BTSequence(new List<BTNode>
+            {
+                new BTCheckMeleeAttackTimer(this),
+                new BTFacePlayer(this),
+                new BTMoveTowardsPlayer(this),
+                new BTCheckMeleeRange(this),
+                new BTMeleeAttack(this),
+            }),
             new BTSequence(new List<BTNode>
             {
                 new BTFacePlayer(this),
-                new BTMoveTowardsPlayer(this),
             }),
         });
         return root;
@@ -45,8 +42,6 @@ public class SkullBossBT: BTTree
 
     protected override void OnUpdate()
     {
-        SpecialTimer += Time.deltaTime;
-        DefaultAttackTimer += Time.deltaTime;
     }
 
     public void OnAttacked(BunnyMessage<float> message) {

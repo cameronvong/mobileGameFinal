@@ -18,12 +18,6 @@ public class DragonEyeBT: BTTree
 
     Action<BunnyMessage<float>> onAttackedCallback;
 
-    public bool CollisionAttacking = false;
-    public bool Enraged = false;
-
-    // Stats
-    public float Health;
-
     // Special 1
     public GameObject DEProjectile;
 

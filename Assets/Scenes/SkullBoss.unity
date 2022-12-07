@@ -1624,7 +1624,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.2415261, y: 2.1610165}
+  m_Offset: {x: -0.926152, y: 2.1610165}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1635,7 +1635,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.10048, y: 9.438253}
+  m_Size: {x: 12.731228, y: 9.438253}
   m_EdgeRadius: 0
 --- !u!4 &1881613299
 Transform:
@@ -1668,17 +1668,19 @@ MonoBehaviour:
   body: {fileID: 0}
   GeneralData: {fileID: 11400000, guid: d0dd172c8ca0be144ba1a0c3f5b02081, type: 2}
   animator: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  mainCollider: {fileID: 0}
   eventManager:
     EventLibrary: []
-  spriteRenderer: {fileID: 0}
   target: {fileID: 236445823}
-  SpecialTimer: 0
-  DefaultAttackTimer: 0
+  SpecialAttackTimer: 0
+  MeleeAttackTimer: 0
+  Health: 0
+  CollisionAttacking: 0
+  Enraged: 0
   playerMask:
     serializedVersion: 2
     m_Bits: 256
-  CollisionAttacking: 0
-  Health: 0
 --- !u!50 &1881613301
 Rigidbody2D:
   serializedVersion: 4
