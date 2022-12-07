@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: SkullBossData
   m_EditorClassIdentifier: 
   Health: 100
-  WalkingSpeed: 5
-  RunningSpeed: 10
+  WalkingSpeed: 10
+  RunningSpeed: 20
   BaseMeleeDamage: 5
   BaseRangeDamage: 5
   MaxAttackCombo: 1
   AttackSpeed: 1.5
-  AttackCooldown: 10
+  AttackCooldown: 3
   SpecialAttackCooldown: 30
-  MeleeAttackRange: 1
+  MeleeAttackRange: 8
   RangeAttackRange: 10
+  EnragePoint: 0.5
+  MeleeAttackAnimLength: 0.4

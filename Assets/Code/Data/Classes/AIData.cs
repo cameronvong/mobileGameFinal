@@ -16,4 +16,5 @@ public class AIData : ScriptableObject {
     public float MeleeAttackRange = 1f;
     public float RangeAttackRange = 10f;
     public float EnragePoint = 0.5f;
+    public float MeleeAttackAnimLength = 0.8f;
 }

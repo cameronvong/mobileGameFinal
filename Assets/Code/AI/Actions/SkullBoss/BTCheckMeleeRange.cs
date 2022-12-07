@@ -4,20 +4,20 @@ using UnityEngine;
 using AI;
 using AI.BehaviourTree;
 
-public class DEDeath : BTNode
+public class BTCheckMeleeRange : BTNode
 {
-    DragonEyeBT boss;
-    public DEDeath(DragonEyeBT boss)
+    BTTree boss;
+
+    public BTCheckMeleeRange(BTTree boss)
     {
         this.boss = boss;
     }
 
     public override BTNodeState Evaluate()
     {
-        if (boss.Health <= 0)
-        {
-            boss.physicsCollider.isTrigger = true;
-            boss.body.AddForce(boss.transform.up * -10f);
+        Vector3 dir = boss.target.transform.position - boss.transform.position;
+        // dir.y = 0;
+        if (Mathf.Abs(dir.x) <= boss.GeneralData.MeleeAttackRange) {
             state = BTNodeState.SUCCESS;
             return state;
         }

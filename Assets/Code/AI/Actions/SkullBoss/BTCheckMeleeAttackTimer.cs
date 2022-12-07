@@ -4,20 +4,18 @@ using UnityEngine;
 using AI;
 using AI.BehaviourTree;
 
-public class DEDeath : BTNode
+public class BTCheckMeleeAttackTimer : BTNode
 {
-    DragonEyeBT boss;
-    public DEDeath(DragonEyeBT boss)
+    BTTree boss;
+
+    public BTCheckMeleeAttackTimer(BTTree boss)
     {
         this.boss = boss;
     }
 
     public override BTNodeState Evaluate()
     {
-        if (boss.Health <= 0)
-        {
-            boss.physicsCollider.isTrigger = true;
-            boss.body.AddForce(boss.transform.up * -10f);
+        if (boss.MeleeAttackTimer >= boss.GeneralData.AttackCooldown) {
             state = BTNodeState.SUCCESS;
             return state;
         }

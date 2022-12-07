@@ -12,16 +12,11 @@ public class DragonEyeBT: BTTree
     public float SpecialTimer;
     public float DefaultAttackTimer;
 
-    public Player target;
+    public BoxCollider2D physicsCollider;
+
     public LayerMask playerMask;
 
     Action<BunnyMessage<float>> onAttackedCallback;
-
-    public bool CollisionAttacking = false;
-    public bool Enraged = false;
-
-    // Stats
-    public float Health;
 
     // Special 1
     public GameObject DEProjectile;
@@ -31,6 +26,9 @@ public class DragonEyeBT: BTTree
         Health = BossData.Health;
         SpecialTimer = 0f;
         DefaultAttackTimer = 0f;
+
+        body = GetComponentInParent<Rigidbody2D>();
+        physicsCollider = transform.parent.gameObject.GetComponent<BoxCollider2D>();
 
         onAttackedCallback = OnAttacked; 
         BunnyEventManager.Instance.RegisterEvent("OnDragonEyeDied", this);

@@ -12,15 +12,9 @@ public class SwordBossBT: BTTree
     public float SpecialTimer;
     public float DefaultAttackTimer;
 
-    public Player target;
     public LayerMask playerMask;
 
     Action<BunnyMessage<float>> onAttackedCallback;
-
-    public bool CollisionAttacking = false;
-
-    // Stats
-    public float Health;
 
     // Special 1
     public Collider2D SpawnAreaCollider;
