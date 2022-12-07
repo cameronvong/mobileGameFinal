@@ -15,4 +15,5 @@ public class AIData : ScriptableObject {
     public float SpecialAttackCooldown = 30f;
     public float MeleeAttackRange = 1f;
     public float RangeAttackRange = 10f;
+    public float EnragePoint = 0.5f;
 }

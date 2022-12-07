@@ -16,10 +16,11 @@ public class DEShoot : BTNode
 
     private IEnumerator ShootProjectiles()
     {
+        float speed = boss.Enraged ? 20f : 10f;
         for (var i = 0; i <= 5; i++) {
             boss.DefaultAttackTimer = 0f;
             GameObject projectile = (GameObject) Object.Instantiate(boss.DEProjectile, boss.transform.position, Quaternion.identity);
-            projectile.GetComponent<Rigidbody2D>().velocity = (boss.target.transform.position - projectile.transform.position).normalized * 20f;
+            projectile.GetComponent<Rigidbody2D>().velocity = (boss.target.transform.position - projectile.transform.position).normalized * speed;
             yield return new WaitForSeconds(0.5f);
         }
         currentlyRunning = false;

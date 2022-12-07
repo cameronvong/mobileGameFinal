@@ -18,6 +18,7 @@ public class DragonEyeBT: BTTree
     Action<BunnyMessage<float>> onAttackedCallback;
 
     public bool CollisionAttacking = false;
+    public bool Enraged = false;
 
     // Stats
     public float Health;
@@ -50,6 +51,10 @@ public class DragonEyeBT: BTTree
     {
         SpecialTimer += Time.deltaTime;
         DefaultAttackTimer += Time.deltaTime;
+
+        if (Health <= BossData.Health * BossData.EnragePoint) {
+            Enraged = true;
+        }
     }
 
     public void OnAttacked(BunnyMessage<float> message) {
