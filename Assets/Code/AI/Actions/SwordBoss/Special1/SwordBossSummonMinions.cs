@@ -14,7 +14,7 @@ public class SwordBossSummonMinion : BTNode
 
     public override BTNodeState Evaluate()
     {
-        if (boss.SpecialTimer >= boss.SwordBossData.SpecialAttackCooldown)
+        if (boss.SpecialTimer >= boss.GeneralData.SpecialAttackCooldown)
         {
             boss.body.velocity = Vector2.zero;
             state = BTNodeState.SUCCESS;

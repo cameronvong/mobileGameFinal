@@ -8,9 +8,6 @@ using Bunny.Tools;
 
 public class DragonEyeBT: BTTree
 {
-    public AIData BossData;
-    public float SpecialTimer;
-    public float DefaultAttackTimer;
 
     public BoxCollider2D physicsCollider;
 
@@ -23,10 +20,6 @@ public class DragonEyeBT: BTTree
 
     protected override BTNode SetupTree()
     {
-        Health = BossData.Health;
-        SpecialTimer = 0f;
-        DefaultAttackTimer = 0f;
-
         body = GetComponentInParent<Rigidbody2D>();
         physicsCollider = transform.parent.gameObject.GetComponent<BoxCollider2D>();
 
@@ -35,7 +28,7 @@ public class DragonEyeBT: BTTree
         BunnyEventManager.Instance.RegisterEvent("DamageBossRequest", this);
         BunnyEventManager.Instance.OnEventRaised<float>("DamageBossRequest", onAttackedCallback);
 
-        body.velocity = new Vector2(BossData.RunningSpeed, BossData.RunningSpeed);
+        body.velocity = new Vector2(GeneralData.RunningSpeed, GeneralData.RunningSpeed);
 
         BTNode root = new BTSelector(new List<BTNode>
         {
@@ -47,10 +40,7 @@ public class DragonEyeBT: BTTree
 
     protected override void OnUpdate()
     {
-        SpecialTimer += Time.deltaTime;
-        DefaultAttackTimer += Time.deltaTime;
-
-        if (Health <= BossData.Health * BossData.EnragePoint) {
+        if (Health <= GeneralData.Health * GeneralData.EnragePoint) {
             Enraged = true;
         }
     }

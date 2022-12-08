@@ -14,10 +14,11 @@ public class SBDefaultAttackCheck : BTNode
 
     public override BTNodeState Evaluate()
     {
-        if (boss.DefaultAttackTimer >= boss.SwordBossData.AttackCooldown)
+        if (boss.MeleeAttackTimer >= boss.GeneralData.AttackCooldown)
         {
-            boss.body.velocity = Vector2.zero;
-            state = BTNodeState.RUNNING;
+            Debug.Log("Attack is ready");
+            // boss.body.velocity = Vector2.zero;
+            state = BTNodeState.SUCCESS;
             return state; 
         }
         state = BTNodeState.FAILURE;

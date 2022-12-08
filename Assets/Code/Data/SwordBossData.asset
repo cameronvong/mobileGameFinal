@@ -23,3 +23,5 @@ MonoBehaviour:
   SpecialAttackCooldown: 30
   MeleeAttackRange: 1
   RangeAttackRange: 10
+  EnragePoint: 0.5
+  MeleeAttackAnimLength: 0.8

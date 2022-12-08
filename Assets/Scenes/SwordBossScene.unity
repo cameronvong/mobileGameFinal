@@ -173,6 +173,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 722879162}
     - target: {fileID: 640204157423249824, guid: f9280e0449da1a449bfa531f0fc21ab0, type: 3}
+      propertyPath: GeneralData
+      value: 
+      objectReference: {fileID: 11400000, guid: c8647f8e95d10224aa86dfc2ee163a16, type: 2}
+    - target: {fileID: 640204157423249824, guid: f9280e0449da1a449bfa531f0fc21ab0, type: 3}
       propertyPath: playerMask.m_Bits
       value: 256
       objectReference: {fileID: 0}

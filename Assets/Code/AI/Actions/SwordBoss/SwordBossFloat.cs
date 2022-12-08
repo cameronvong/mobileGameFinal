@@ -39,15 +39,15 @@ public class SwordBossFloat : BTNode
         }
 
         if (!changeDirection) {
-            body.velocity = bossTransform.up * boss.SwordBossData.WalkingSpeed;
-            // body.AddForce(bossTransform.up * boss.SwordBossData.WalkingSpeed);
+            body.velocity = bossTransform.up * boss.GeneralData.WalkingSpeed;
+            // body.AddForce(bossTransform.up * boss.GeneralData.WalkingSpeed);
             forceAdded = true;
         } else if  (changeDirection) {
-            body.velocity = bossTransform.up * -boss.SwordBossData.WalkingSpeed;
+            body.velocity = bossTransform.up * -boss.GeneralData.WalkingSpeed;
             // body.AddForce(bossTransform.up * -boss.SwordBossData.WalkingSpeed);
             forceAdded = true;
         }
-        state = BTNodeState.RUNNING;
+        state = BTNodeState.SUCCESS;
         return state;
     }
 }

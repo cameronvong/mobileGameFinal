@@ -15,18 +15,24 @@ public class SwordBossMoveTowardsPlayer : BTNode
     public override BTNodeState Evaluate()
     {
         object t = GetData("target");
-        if (boss.DefaultAttackTimer < boss.SwordBossData.AttackCooldown)
-        {
-            state = BTNodeState.FAILURE;
-            return state;
-        }
+        // if (boss.MeleeAttackTimer < boss.GeneralData.AttackCooldown)
+        // {
+        //     state = BTNodeState.FAILURE;
+        //     return state;
+        // }
         Debug.Log($"Target is {parent.parent} {parent.parent.GetData("target") != null}");
-        if (t == null && boss.transform.position != boss.target.transform.position)
+        if (t == null)
         {
+            Debug.Log("Moving");
             // boss.DefaultAttackTimer = 0f;
-            Vector3 direction = (boss.target.transform.position - boss.transform.position).normalized;
-            Vector3 newPosition = boss.transform.position + direction * boss.SwordBossData.RunningSpeed * Time.deltaTime;
-            boss.body.MovePosition(new Vector3(newPosition.x, 8f + boss.SwordBossData.RunningSpeed * Time.deltaTime, newPosition.z));
+            Vector3 dir = boss.target.transform.position - boss.transform.position;
+            dir.y = 8f;
+            if (boss.transform.position.y >= 8f) {
+                dir.y = 0;
+            }
+            // dir.y = 0;
+            dir.Normalize();
+            boss.body.velocity = dir * boss.GeneralData.RunningSpeed;
             RaycastHit2D hit = Physics2D.Raycast(boss.transform.position, Vector2.down, Mathf.Infinity, boss.playerMask.value);
             Debug.DrawRay(boss.transform.position, Vector2.down * 1000f, Color.green);
             if(hit.collider != null && boss.transform.position.y >= 8f)
@@ -37,6 +43,9 @@ public class SwordBossMoveTowardsPlayer : BTNode
                 return state; 
             }
             // // boss.body.velocity = Vector2.zero;
+            // state = BTNodeState.FAILURE;
+            // return state; 
+        } else {
             state = BTNodeState.FAILURE;
             return state; 
         }

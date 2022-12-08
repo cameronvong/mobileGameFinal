@@ -22,6 +22,7 @@ namespace AI.BehaviourTree {
         // Timers
         public float SpecialAttackTimer;
         public float MeleeAttackTimer;
+        public float RangeAttackTimer;
 
         public float Health;
 
@@ -53,6 +54,7 @@ namespace AI.BehaviourTree {
 
             SpecialAttackTimer += Time.deltaTime;
             MeleeAttackTimer += Time.deltaTime;
+            RangeAttackTimer += Time.deltaTime;
             OnUpdate();
         }
 
