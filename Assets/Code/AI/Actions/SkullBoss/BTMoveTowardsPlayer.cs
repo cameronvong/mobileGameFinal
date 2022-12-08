@@ -15,6 +15,7 @@ public class BTMoveTowardsPlayer : BTNode
 
     public override BTNodeState Evaluate()
     {
+        var movementSpeed = boss.Enraged ? boss.GeneralData.RunningSpeed : boss.GeneralData.WalkingSpeed;
         Vector3 dir = boss.target.transform.position - boss.transform.position;
         // dir.y = 0;
         dir.Normalize();

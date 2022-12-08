@@ -6,9 +6,9 @@ using AI.BehaviourTree;
 
 public class SBDeath : BTNode
 {
-    public SkullBossBT boss;
+    public BTTree boss;
 
-    public SBDeath(SkullBossBT boss)
+    public SBDeath(BTTree boss)
     {
         this.boss = boss;
     }

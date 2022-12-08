@@ -6,7 +6,7 @@ using AI.BehaviourTree;
 using Bunny;
 using Bunny.Tools;
 
-public class SkullBossBT: BTTree
+public class SpectralKnightBT: BTTree
 {
     public LayerMask playerMask;
 
@@ -14,16 +14,23 @@ public class SkullBossBT: BTTree
 
     protected override BTNode SetupTree()
     {
-        body.velocity = new Vector2(10f, 10f);
-
         onAttackedCallback = OnAttacked; 
-        BunnyEventManager.Instance.RegisterEvent("OnSkullBossDied", this);
+        BunnyEventManager.Instance.RegisterEvent("OnSpectralKnightDied", this);
         BunnyEventManager.Instance.RegisterEvent("DamageBossRequest", this);
         BunnyEventManager.Instance.OnEventRaised<float>("DamageBossRequest", onAttackedCallback);
 
         BTNode root = new BTSelector(new List<BTNode>
         {
             new SBDeath(this),
+            new BTSequence(new List<BTNode>
+            {
+                new BTCheckEnragedState(this),
+                new BTFacePlayer(this),
+                new BTCheckMeleeAttackTimer(this),
+                new BTMoveTowardsPlayer(this),
+                new BTCheckMeleeRange(this),
+                new SKEnragedAttack(this),
+            }),
             new BTSequence(new List<BTNode>
             {
                 new BTCheckMeleeAttackTimer(this),
@@ -54,7 +61,7 @@ public class SkullBossBT: BTTree
         }
 
         if (Health <= 0) {
-            BunnyEventManager.Instance.Fire<bool>("OnSkullBossDied", new BunnyMessage<bool>(true, this));
+            BunnyEventManager.Instance.Fire<bool>("OnSpectralKnightDied", new BunnyMessage<bool>(true, this));
             Health = 0;
         }
     }

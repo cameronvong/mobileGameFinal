@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,511 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2592
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1e428159bb8e04397a6d2c14fa6e09
+      internalID: -755671501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_1
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 2592
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb57144a60c3d6a4f9003dff993d4fe2
+      internalID: -1713344342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_2
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 2592
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9185f50f49f05344b96529c23eef5175
+      internalID: -1415160915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_3
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 2592
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c783536fb1c3447885265d6fceb494
+      internalID: -1585735728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_4
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 2592
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d34c7a32fdd26149ade76c65216418a
+      internalID: 1474903597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1944
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736114c94cc7dcb4f9e233a5006a3a5a
+      internalID: 933290668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_6
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1944
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c152385026970498b4d5ea402350fa
+      internalID: -718387958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_7
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1944
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5414feb95ec1b0440bc8ed264de55350
+      internalID: 611336704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_8
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 1944
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671a8ec47eaaeda4ebe00c72965f68d7
+      internalID: 1716845270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_9
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 1944
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4361adccc42656b4ca4a845caf1a7da5
+      internalID: -117491730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1296
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d32c53c1a786944eaf13d9eee6d336e
+      internalID: -495745833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_11
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1296
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d74a5cd95b2b31468060b1b2262498a
+      internalID: 1655459124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_12
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1296
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c441ad4410375ff42899f127edf450fc
+      internalID: 1514235809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_13
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 1296
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29e888dfe8981f42971d3d1c960c910
+      internalID: 1219862992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_14
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 1296
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1542c468862966f43bd3dede8c5e30d3
+      internalID: -732046190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 648
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b93de9de04fa24183c1ec63fb379ad
+      internalID: 159706069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_16
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 648
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a56401d0b8faa43abecee30dce3ded
+      internalID: -2129304162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_17
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 648
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849c9b761c909984cb036fc4cd23c491
+      internalID: -815402231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_18
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 648
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4476f72fe47e16d4183336430852caf1
+      internalID: -957043497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_19
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 648
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39420baae94a4b648a87a1f9358e450c
+      internalID: -1523333494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c053431691a0c48bf419f1a161ff9e
+      internalID: 2070897768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_21
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 0
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e8ee3a3602dc8b44a2ef83a4abeff46
+      internalID: 295062994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_22
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 0
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728e34b42f7959e4789eeb6a7a985fd4
+      internalID: 539736301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightEnrageAttack_23
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 0
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6318a73da58d0445a724c249b942074
+      internalID: -873249788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +630,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SpectralKnightEnrageAttack_23: -873249788
+      SpectralKnightEnrageAttack_19: -1523333494
+      SpectralKnightEnrageAttack_2: -1415160915
+      SpectralKnightEnrageAttack_4: 1474903597
+      SpectralKnightEnrageAttack_9: -117491730
+      SpectralKnightEnrageAttack_17: -815402231
+      SpectralKnightEnrageAttack_18: -957043497
+      SpectralKnightEnrageAttack_11: 1655459124
+      SpectralKnightEnrageAttack_7: 611336704
+      SpectralKnightEnrageAttack_8: 1716845270
+      SpectralKnightEnrageAttack_20: 2070897768
+      SpectralKnightEnrageAttack_12: 1514235809
+      SpectralKnightEnrageAttack_5: 933290668
+      SpectralKnightEnrageAttack_1: -1713344342
+      SpectralKnightEnrageAttack_10: -495745833
+      SpectralKnightEnrageAttack_14: -732046190
+      SpectralKnightEnrageAttack_15: 159706069
+      SpectralKnightEnrageAttack_13: 1219862992
+      SpectralKnightEnrageAttack_22: 539736301
+      SpectralKnightEnrageAttack_3: -1585735728
+      SpectralKnightEnrageAttack_0: -755671501
+      SpectralKnightEnrageAttack_6: -718387958
+      SpectralKnightEnrageAttack_16: -2129304162
+      SpectralKnightEnrageAttack_21: 295062994
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

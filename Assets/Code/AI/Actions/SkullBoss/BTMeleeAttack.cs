@@ -17,8 +17,12 @@ public class BTMeleeAttack : BTNode
 
     public IEnumerator AttackLengthEnd() {
         state = BTNodeState.RUNNING;
+        yield return new WaitForSeconds(boss.GeneralData.MeleeDamageDelay);
+        Vector3 dir = boss.target.transform.position - boss.transform.position;
+        if (Mathf.Abs(dir.x) <= boss.GeneralData.MeleeAttackRange) {
+            BunnyEventManager.Instance.Fire<float>("DamagePlayerRequest", new BunnyMessage<float>(10f, this));
+        }
         yield return new WaitForSeconds(boss.GeneralData.MeleeAttackAnimLength);
-        BunnyEventManager.Instance.Fire<float>("DamagePlayerRequest", new BunnyMessage<float>(10f, this));
         state = BTNodeState.SUCCESS;
     }
 
