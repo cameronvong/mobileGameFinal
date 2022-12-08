@@ -18,7 +18,7 @@ public class DEShoot : BTNode
     {
         float speed = boss.Enraged ? 20f : 10f;
         for (var i = 0; i <= 5; i++) {
-            boss.DefaultAttackTimer = 0f;
+            boss.RangeAttackTimer = 0f;
             GameObject projectile = (GameObject) Object.Instantiate(boss.DEProjectile, boss.transform.position, Quaternion.identity);
             projectile.GetComponent<Rigidbody2D>().velocity = (boss.target.transform.position - projectile.transform.position).normalized * speed;
             yield return new WaitForSeconds(0.5f);
@@ -34,9 +34,9 @@ public class DEShoot : BTNode
             state = BTNodeState.SUCCESS;
             return state;
         }
-        if (boss.DefaultAttackTimer >= boss.BossData.AttackCooldown)
+        if (boss.RangeAttackTimer >= boss.GeneralData.AttackCooldown)
         {
-            boss.DefaultAttackTimer = 0f;
+            boss.RangeAttackTimer = 0f;
             currentVelocity = boss.body.velocity;
             boss.body.velocity = Vector2.zero;
             currentlyRunning = true;
