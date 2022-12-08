@@ -29,7 +29,7 @@ public class SwordBossSMRun : BTNode
             SpawnSword();
         }
         boss.SpecialTimer = 0f;
-        boss.DefaultAttackTimer = 0f;
+        boss.MeleeAttackTimer = 0f;
         specialAttacking = false;
     }
 

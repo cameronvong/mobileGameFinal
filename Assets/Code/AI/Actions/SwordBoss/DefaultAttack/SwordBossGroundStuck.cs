@@ -15,7 +15,7 @@ public class SwordBossGroundStuck : BTNode
     public IEnumerator StayInGround() {
         state = BTNodeState.RUNNING;
         yield return new WaitForSeconds(3);
-        boss.DefaultAttackTimer = 0f;
+        boss.MeleeAttackTimer = 0f;
         state = BTNodeState.SUCCESS;
         parent.parent.DeleteData("plunged");
         parent.parent.DeleteData("target");
@@ -23,7 +23,7 @@ public class SwordBossGroundStuck : BTNode
 
     public override BTNodeState Evaluate()
     {
-        if (boss.DefaultAttackTimer < boss.SwordBossData.AttackCooldown)
+        if (boss.MeleeAttackTimer < boss.GeneralData.AttackCooldown)
         {
             state = BTNodeState.FAILURE;
             return state;

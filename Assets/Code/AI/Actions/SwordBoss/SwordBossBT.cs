@@ -8,9 +8,7 @@ using Bunny.Tools;
 
 public class SwordBossBT: BTTree
 {
-    public AIData SwordBossData;
     public float SpecialTimer;
-    public float DefaultAttackTimer;
 
     public LayerMask playerMask;
 
@@ -24,9 +22,8 @@ public class SwordBossBT: BTTree
     protected override BTNode SetupTree()
     {
         SwordBossBT bossInstance = this;
-        Health = SwordBossData.Health;
+        Health = GeneralData.Health;
         SpecialTimer = 0f;
-        DefaultAttackTimer = 0f;
         SpawnAreaCollider = SACGO.GetComponent<BoxCollider2D>();
 
         onAttackedCallback = OnAttacked; 
@@ -39,19 +36,29 @@ public class SwordBossBT: BTTree
             new BTSequence(new List<BTNode>
             {
                 new SBDefaultAttackCheck(bossInstance),
-                new BTSequence(new List<BTNode>
+                new BTSelector(new List<BTNode>
                 {
                     new SwordBossMoveTowardsPlayer(bossInstance),
                     new SBPlunge(bossInstance),
-                    new SwordBossGroundStuck(bossInstance),
+                    // new SwordBossGroundStuck(bossInstance),
                 }),
+                // new BTSequence(new List<BTNode>
+                // {
+                //     new SwordBossMoveTowardsPlayer(bossInstance),
+                //     new SBPlunge(bossInstance),
+                //     new SwordBossGroundStuck(bossInstance),
+                // }),
             }),
             new BTSequence(new List<BTNode>
             {
                 new SwordBossSummonMinion(bossInstance),
                 new SwordBossSMRun(bossInstance),
             }),
-            new SwordBossFloat(bossInstance, transform, body),
+            new BTSequence(new List<BTNode>
+            {
+                new SwordBossFloat(bossInstance, transform, body),
+            }),
+            // new SwordBossFloat(bossInstance, transform, body),
         });
         return root;
     }
@@ -59,7 +66,6 @@ public class SwordBossBT: BTTree
     protected override void OnUpdate()
     {
         SpecialTimer += Time.deltaTime;
-        DefaultAttackTimer += Time.deltaTime;
     }
 
     public void OnAttacked(BunnyMessage<float> message) {

@@ -14,34 +14,37 @@ public class SBPlunge : BTNode
         this.boss = boss;
     }
 
+    public IEnumerator StayInGround() {
+        state = BTNodeState.SUCCESS;
+        yield return new WaitForSeconds(3);
+        boss.MeleeAttackTimer = 0f;
+        state = BTNodeState.FAILURE;
+        parent.parent.DeleteData("plunged");
+        parent.parent.DeleteData("target");
+    }
+
     public override BTNodeState Evaluate()
     {
         object t = parent.parent.GetData("plunged");
-        if (boss.DefaultAttackTimer < boss.SwordBossData.AttackCooldown)
-        {
-            state = BTNodeState.FAILURE;
-            return state;
-        }
-        if(t != null) {
-            state = BTNodeState.RUNNING;
-            return state;
-        }
         Debug.Log("Adding force down");
         if(boss.transform.position.y >= 0f) {
             boss.CollisionAttacking = true;
-            boss.body.AddForce(boss.transform.up * -20f, ForceMode2D.Impulse);
+            boss.body.AddForce(boss.transform.up * -40f);
         } else {
             // parent.parent.DeleteData("target");
-            parent.parent.SetData("plunged", true);
+            if (t == null) {
+                parent.parent.SetData("plunged", true);
+                BunnyEventManager.Instance.Fire<CameraEffectRequestPayload>("CameraEffectRequest", new BunnyMessage<CameraEffectRequestPayload>() {
+                    payload = new CameraEffectRequestPayload() {
+                        duration = 0.5f,
+                        effectType = CameraEffectType.SHAKE,
+                    },
+                    sender = boss
+                });
+                boss.StartCoroutine(StayInGround());
+            }
             boss.CollisionAttacking = false;
-            BunnyEventManager.Instance.Fire<CameraEffectRequestPayload>("CameraEffectRequest", new BunnyMessage<CameraEffectRequestPayload>() {
-                payload = new CameraEffectRequestPayload() {
-                    duration = 0.5f,
-                    effectType = CameraEffectType.SHAKE,
-                },
-                sender = boss
-            });
-            boss.body.velocity = Vector2.zero;
+            boss.body.velocity = Vector2.zero;;
         }
         state = BTNodeState.SUCCESS;
         return state;
