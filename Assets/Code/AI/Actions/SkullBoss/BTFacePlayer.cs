@@ -9,7 +9,7 @@ public class BTFacePlayer : BTNode
     BTTree boss;
     private float baseScaleX;
 
-    public BTFacePlayer(SkullBossBT boss)
+    public BTFacePlayer(BTTree boss)
     {
         this.boss = boss;
         baseScaleX = boss.transform.localScale.x;

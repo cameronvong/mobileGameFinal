@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,7 +139,469 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2592
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f7478465d53f354dbb3ad6d7a7268ae
+      internalID: 1239491224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 2592
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f293cd48f65af5b4fadfb404955eb203
+      internalID: -1066122034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 2592
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a993e87e56fb7504a95c4078bdf36c38
+      internalID: -1525999546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 2592
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707333cd901166e4eb64bfae917aaf28
+      internalID: 1171010845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 2592
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9569e916abf2a0744908d5f4ccc67a78
+      internalID: -1160035017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1944
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a86841e4b0973d48839bcce039a23af
+      internalID: -1436169246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1944
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d100d44b65cccfe41850831c329c0b34
+      internalID: 1606814041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1944
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3fa4d49cd846c4da62ffa0bc9163c1
+      internalID: 413254601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 1944
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d42e5fa50084141a71f7c439a8ad14
+      internalID: 777352191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 1944
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132d64d0c824d234e903d0254c73871b
+      internalID: -53573373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1296
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a78b17208ec4574caa8cf44d29f98b0
+      internalID: 1402372704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1296
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a27a01bd12db9824fb8c1105b9635732
+      internalID: 686464163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1296
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6016ef7d12cf7d74c9866451bbfa6112
+      internalID: -686974584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 1296
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2845b69cf31f6864ebc59304336d957f
+      internalID: 500000864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 1296
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8a5fa5b03735043a3d3339f7c517e3
+      internalID: -1723397685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 648
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f968c7c5ee40f55449f9e10ecf38065e
+      internalID: 286359189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 648
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836ba853714746940884debb44a619e1
+      internalID: 457067107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 648
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ffae0fd6ca01b46804e51febd49053
+      internalID: -998305688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 648
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6a88b9665677048b612e6cd5c5333b
+      internalID: 1366717710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 648
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f8911612602814a82f1140201040d3
+      internalID: 734137440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c7f2cfc19854c469e25e77c3eaacf7
+      internalID: -720147631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightAttackSpritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 0
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fd904e804311948a8720fde83a86f5
+      internalID: -832211335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -150,7 +612,29 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SpectralKnightAttackSpritesheet_19: 734137440
+      SpectralKnightAttackSpritesheet_3: 1171010845
+      SpectralKnightAttackSpritesheet_20: -720147631
+      SpectralKnightAttackSpritesheet_11: 686464163
+      SpectralKnightAttackSpritesheet_16: 457067107
+      SpectralKnightAttackSpritesheet_10: 1402372704
+      SpectralKnightAttackSpritesheet_18: 1366717710
+      SpectralKnightAttackSpritesheet_14: -1723397685
+      SpectralKnightAttackSpritesheet_15: 286359189
+      SpectralKnightAttackSpritesheet_7: 413254601
+      SpectralKnightAttackSpritesheet_21: -832211335
+      SpectralKnightAttackSpritesheet_4: -1160035017
+      SpectralKnightAttackSpritesheet_2: -1525999546
+      SpectralKnightAttackSpritesheet_0: 1239491224
+      SpectralKnightAttackSpritesheet_6: 1606814041
+      SpectralKnightAttackSpritesheet_17: -998305688
+      SpectralKnightAttackSpritesheet_1: -1066122034
+      SpectralKnightAttackSpritesheet_8: 777352191
+      SpectralKnightAttackSpritesheet_5: -1436169246
+      SpectralKnightAttackSpritesheet_12: -686974584
+      SpectralKnightAttackSpritesheet_9: -53573373
+      SpectralKnightAttackSpritesheet_13: 500000864
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

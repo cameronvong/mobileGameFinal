@@ -4,19 +4,18 @@ using UnityEngine;
 using AI;
 using AI.BehaviourTree;
 
-public class BTCheckMeleeAttackTimer : BTNode
+public class BTCheckEnragedState : BTNode
 {
     BTTree boss;
 
-    public BTCheckMeleeAttackTimer(BTTree boss)
+    public BTCheckEnragedState(BTTree boss)
     {
         this.boss = boss;
     }
 
     public override BTNodeState Evaluate()
     {
-        var multiplier = boss.Enraged ? 0.2 : 1;
-        if (boss.MeleeAttackTimer >= boss.GeneralData.AttackCooldown * multiplier) {
+        if (boss.Health <= boss.GeneralData.Health * boss.GeneralData.EnragePoint) {
             state = BTNodeState.SUCCESS;
             return state;
         }
