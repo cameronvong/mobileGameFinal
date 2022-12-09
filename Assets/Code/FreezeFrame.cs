@@ -30,7 +30,7 @@ public class FrameFreeze : MonoBehaviour
     IEnumerator WaitTime() {
         waiting = true;
         yield return new WaitForSecondsRealtime(0.01f);
-        time.timeScale = 1.0f;
+        Time.timeScale = 1.0f;
         waiting = false;
     }
 
