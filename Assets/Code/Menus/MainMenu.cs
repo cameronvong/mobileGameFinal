@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
 
 
     public void Play(){
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("SkullBoss");
     }
 
     public void Quit(){

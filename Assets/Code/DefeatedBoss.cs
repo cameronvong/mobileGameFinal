@@ -8,6 +8,7 @@ using Bunny.Tools;
 
 public class DefeatedBoss : MonoBehaviour
 {
+    /*
     // Start is called before the first frame update
     private void Awake() {
         BunnyEventManager.Instance.RegisterEvent("OnBossHurt", this);
@@ -27,4 +28,5 @@ public class DefeatedBoss : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
+    */
 }
