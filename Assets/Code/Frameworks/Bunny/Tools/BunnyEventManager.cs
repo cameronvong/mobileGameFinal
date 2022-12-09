@@ -54,7 +54,8 @@ namespace Bunny.Tools
         public BunnyEvent RegisterEvent(string EventName, object source)
         {
             if(_events.ContainsKey(EventName)) {
-                throw new EventRegistryException($"Event[{EventName}] already exists. Please choose a unique name.");
+                return _events[EventName];
+                // throw new EventRegistryException($"Event[{EventName}] already exists. Please choose a unique name.");
             }
             BunnyEvent nEvent = new BunnyEvent(EventName, source);
             _events[EventName] = nEvent;

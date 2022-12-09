@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,7 +139,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: FloatingHeadBossDeathSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3968
+        width: 1984
+        height: 1984
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e11c255342d3e148bc4869e6a7fef53
+      internalID: 2044140123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingHeadBossDeathSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 3968
+        width: 1984
+        height: 1984
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170c45926f020d0429479d83da219703
+      internalID: 1286166420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingHeadBossDeathSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 3968
+        y: 3968
+        width: 1984
+        height: 1984
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a852576d2ba0de348b1948a4c92864d3
+      internalID: -596982476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingHeadBossDeathSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1984
+        width: 1984
+        height: 1984
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94073d2eaae702b468fa0761a0f1830b
+      internalID: -398601829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingHeadBossDeathSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 1984
+        width: 1984
+        height: 1984
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd95d4c810f5b5478041051c0de7745
+      internalID: 742857035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingHeadBossDeathSpritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3968
+        y: 1984
+        width: 1984
+        height: 1984
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f282e4c5f447724998133df9f0e2f2c
+      internalID: 1936445837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingHeadBossDeathSpritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1984
+        height: 1984
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ffedb7978a5aae4dbf17fe613cdd286
+      internalID: 1544079823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingHeadBossDeathSpritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 0
+        width: 1984
+        height: 1984
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef868547ad25bf46a604c34fea5984d
+      internalID: -206254340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingHeadBossDeathSpritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 3968
+        y: 0
+        width: 1984
+        height: 1984
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a5a423f44773849b5878a1167a6558
+      internalID: -788094968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -150,7 +339,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FloatingHeadBossDeathSpritesheet_1: 1286166420
+      FloatingHeadBossDeathSpritesheet_7: -206254340
+      FloatingHeadBossDeathSpritesheet_4: 742857035
+      FloatingHeadBossDeathSpritesheet_0: 2044140123
+      FloatingHeadBossDeathSpritesheet_5: 1936445837
+      FloatingHeadBossDeathSpritesheet_6: 1544079823
+      FloatingHeadBossDeathSpritesheet_8: -788094968
+      FloatingHeadBossDeathSpritesheet_2: -596982476
+      FloatingHeadBossDeathSpritesheet_3: -398601829
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
