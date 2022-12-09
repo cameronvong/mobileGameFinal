@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,7 +139,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpectralKnightDeathSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1296
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0949a0e9cc1b37439114b237fc25279
+      internalID: 1809502637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightDeathSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1296
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9f7a9e05933d24798846573036a2cb
+      internalID: 956418007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightDeathSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 1296
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1e209182d4b3a42aef89a7fdad1488
+      internalID: -1484979403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightDeathSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 648
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c31f9bc677c8b64f93b2715c786d9e7
+      internalID: 193861435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightDeathSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 648
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e4707ab5f247854e97dc0b3418dcdbe
+      internalID: 784406553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightDeathSpritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 648
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb77f002cc2e9204dacf626d0b1c3898
+      internalID: 211752761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightDeathSpritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f624ad3d363f04bbe1786b3a5fabba
+      internalID: -450853314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightDeathSpritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 0
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd3ccb8cb4ac364db3eebdf4fb998d8
+      internalID: 1474670374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpectralKnightDeathSpritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 0
+        width: 648
+        height: 648
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f7b67a77d64477419b6edbba8ba063d
+      internalID: -1915265901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -150,7 +339,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SpectralKnightDeathSpritesheet_3: 193861435
+      SpectralKnightDeathSpritesheet_8: -1915265901
+      SpectralKnightDeathSpritesheet_5: 211752761
+      SpectralKnightDeathSpritesheet_1: 956418007
+      SpectralKnightDeathSpritesheet_6: -450853314
+      SpectralKnightDeathSpritesheet_0: 1809502637
+      SpectralKnightDeathSpritesheet_4: 784406553
+      SpectralKnightDeathSpritesheet_7: 1474670374
+      SpectralKnightDeathSpritesheet_2: -1484979403
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
