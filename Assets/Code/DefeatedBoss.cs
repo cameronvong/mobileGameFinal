@@ -8,10 +8,11 @@ using Bunny.Tools;
 
 public class DefeatedBoss : MonoBehaviour
 {
-    /*
+    
     // Start is called before the first frame update
     private void Awake() {
         BunnyEventManager.Instance.RegisterEvent("OnBossHurt", this);
+        
         callback = sceneTransition;
     }
 
@@ -19,8 +20,10 @@ public class DefeatedBoss : MonoBehaviour
         BunnyEventManager.Instance.OnEventRaised<float>("OnBossHurt", callback);
     }
 
-    public void sceneTransition() {
-        StartCoroutine(deathAnimWait());
+    public void sceneTransition(BunnyMessage<float> message) {
+        if (message.payload <= 0) {
+            StartCoroutine(deathAnimWait());
+        }
     }
     
     IEnumerator deathAnimWait() {
@@ -28,5 +31,5 @@ public class DefeatedBoss : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
-    */
+    
 }

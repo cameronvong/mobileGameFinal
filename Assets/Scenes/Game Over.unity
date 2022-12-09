@@ -901,7 +901,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1118bd17b91a4db42893b9aa4305aed9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -923,7 +923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 994007680}
   - component: {fileID: 994007681}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sword Boss Minon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

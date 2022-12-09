@@ -9,6 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: d799f9ac66fa248e285a78cb82cd5a54
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: e13fe0d5bb86546bfbef443b6ef6e58b
+  - enabled: 1
+    path: Assets/Scenes/SkullBoss.unity
+    guid: 4a5d4e4658c5c264d89206f8c2574206
+  - enabled: 1
+    path: Assets/Scenes/FloatingHeadsScene.unity
+    guid: d3598ad430ccba8488efebe65e4d3b9a
+  - enabled: 1
     path: Assets/Scenes/SwordBossScene.unity
     guid: b47aaf4fbe2a19a40a3ae1d582bd9f46
+  - enabled: 1
+    path: Assets/Scenes/SpectralKnightBoss.unity
+    guid: 9ae1d0db2ca6e5144b38f49d1d0ccaff
   m_configObjects: {}
