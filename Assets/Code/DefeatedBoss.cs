@@ -17,6 +17,11 @@ public class DefeatedBoss : MonoBehaviour
         callback = sceneTransition;
     }
 
+    void OnDestroy()
+    {
+        BunnyEventManager.Instance.Disconnect("OnBossHurt");
+    }
+
     private void Start() {
         BunnyEventManager.Instance.OnEventRaised<float>("OnBossHurt", callback);
     }
