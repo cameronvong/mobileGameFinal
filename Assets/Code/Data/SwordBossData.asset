@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908ff925405494b41a6f5f3be7d4414f, type: 3}
   m_Name: SwordBossData
   m_EditorClassIdentifier: 
-  Health: 100
+  Health: 500
   WalkingSpeed: 2
   RunningSpeed: 10
   BaseMeleeDamage: 5
   BaseRangeDamage: 5
   MaxAttackCombo: 1
   AttackSpeed: 1.5
-  AttackCooldown: 10
-  SpecialAttackCooldown: 30
+  AttackCooldown: 5
+  SpecialAttackCooldown: 10
   MeleeAttackRange: 1
   RangeAttackRange: 10
   EnragePoint: 0.5
   MeleeAttackAnimLength: 0.8
+  MeleeDamageDelay: 0.5

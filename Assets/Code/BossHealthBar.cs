@@ -24,8 +24,8 @@ public class BossHealthBar : MonoBehaviour
 
     void Start()
     {
-        callback = OnPlayerHurt;
-        BunnyEventManager.Instance.OnEventRaised("OnPlayerHurt", callback);
+        callback = OnBossHurt;
+        BunnyEventManager.Instance.OnEventRaised("OnBossHurt", callback);
     }
 
     public void SetMaxHealth(float health)
@@ -39,7 +39,7 @@ public class BossHealthBar : MonoBehaviour
         slider.value = health;
     }
 
-    public void OnPlayerHurt(BunnyMessage<float> message)
+    public void OnBossHurt(BunnyMessage<float> message)
     {
         SetHealth(message.payload);
     }
