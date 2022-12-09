@@ -17,6 +17,11 @@ public class PlayerDeathScreen : MonoBehaviour
         callback = goToGameOver;
     }
 
+    void OnDestroy()
+    {
+        BunnyEventManager.Instance.Disconnect("OnPlayerHurt");
+    }
+
     private void Start() {
         BunnyEventManager.Instance.OnEventRaised<float>("OnPlayerHurt", callback);
     }

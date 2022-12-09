@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpectralKnightBoss.unity
     guid: 9ae1d0db2ca6e5144b38f49d1d0ccaff
+  - enabled: 1
+    path: Assets/Scenes/VictoryScreen.unity
+    guid: 8de5836bd5a870146a20bfc79ebc8b62
   m_configObjects: {}
