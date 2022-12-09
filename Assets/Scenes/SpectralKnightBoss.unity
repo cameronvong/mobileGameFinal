@@ -519,8 +519,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -320, y: 32.5}
-  m_SizeDelta: {x: 120.2707, y: 120.2707}
+  m_AnchoredPosition: {x: -329, y: 74}
+  m_SizeDelta: {x: 138.2017, y: 138.2017}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &397186988
 MonoBehaviour:
@@ -824,7 +824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6603774, g: 0.17132434, b: 0.17132434, a: 1}
+  m_Color: {r: 1, g: 0.4292453, b: 0.4292453, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 623336947}
   - component: {fileID: 623336946}
   m_Layer: 5
-  m_Name: Boss Healthbar_New
+  m_Name: Boss Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -920,8 +920,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 72.448, y: -339.20667}
-  m_SizeDelta: {x: 565.7654, y: 75.0096}
+  m_AnchoredPosition: {x: 750, y: 474}
+  m_SizeDelta: {x: 209.1923, y: 104.5962}
   m_Pivot: {x: 0.6280522, y: 0.5}
 --- !u!114 &623336946
 MonoBehaviour:
@@ -1047,7 +1047,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1847e9bf0009047c783309a467c69c2f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4f68121572710497080c6ec140d70b5d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1661,23 +1661,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7070688071090176996, guid: 613d1107cc845d54ba2714e4457c55b6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 120.2707
+      value: 138.2017
       objectReference: {fileID: 0}
     - target: {fileID: 7070688071090176996, guid: 613d1107cc845d54ba2714e4457c55b6, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 120.2707
+      value: 138.2017
       objectReference: {fileID: 0}
     - target: {fileID: 7070688071090176996, guid: 613d1107cc845d54ba2714e4457c55b6, type: 3}
       propertyPath: m_AnchoredPosition.x
-<<<<<<< Updated upstream
       value: -508.6617
-=======
-      value: -520
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 7070688071090176996, guid: 613d1107cc845d54ba2714e4457c55b6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 32.5
+      value: 73.99997
       objectReference: {fileID: 0}
     - target: {fileID: 7070688071090176997, guid: 613d1107cc845d54ba2714e4457c55b6, type: 3}
       propertyPath: m_Delegates.Array.size
@@ -2037,13 +2033,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-<<<<<<< Updated upstream
   m_AnchoredPosition: {x: -696.0015, y: 73.99997}
   m_SizeDelta: {x: 138.2017, y: 138.2017}
-=======
-  m_AnchoredPosition: {x: -420, y: 155}
-  m_SizeDelta: {x: 120.2707, y: 120.2707}
->>>>>>> Stashed changes
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1501485447
 MonoBehaviour:
@@ -2893,18 +2884,6 @@ PrefabInstance:
     - target: {fileID: 1766150858921683604, guid: 123f2896a0aaeb24f8d3ac5555dae0ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1766150858921683605, guid: 123f2896a0aaeb24f8d3ac5555dae0ff, type: 3}
-      propertyPath: m_Color.b
-      value: 0.69753474
-      objectReference: {fileID: 0}
-    - target: {fileID: 1766150858921683605, guid: 123f2896a0aaeb24f8d3ac5555dae0ff, type: 3}
-      propertyPath: m_Color.g
-      value: 0.69753474
-      objectReference: {fileID: 0}
-    - target: {fileID: 1766150858921683605, guid: 123f2896a0aaeb24f8d3ac5555dae0ff, type: 3}
-      propertyPath: m_Color.r
-      value: 0.7075472
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 123f2896a0aaeb24f8d3ac5555dae0ff, type: 3}
