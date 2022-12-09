@@ -7,6 +7,7 @@ using AI.BehaviourTree;
 public class SBDeath : BTNode
 {
     public BTTree boss;
+    public bool animatorSet;
 
     public SBDeath(BTTree boss)
     {
@@ -16,11 +17,15 @@ public class SBDeath : BTNode
     public override BTNodeState Evaluate()
     {
         if (boss.Health <= 0) {
-            boss.transform.GetChild(0).GetComponent<BoxCollider2D>().isTrigger = true;
-            boss.body.AddForce(Vector2.down * 10f);
+            if(!animatorSet) {
+                Debug.Log("Triggering death anim");
+                boss.animator.SetBool("death", true);
+                animatorSet = true;
+            }
             state = BTNodeState.SUCCESS;
             return state;
         }
+        animatorSet = false;
         state = BTNodeState.FAILURE;
         return state;
     }

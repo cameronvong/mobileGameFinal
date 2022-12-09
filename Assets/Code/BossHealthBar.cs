@@ -15,7 +15,8 @@ public class BossHealthBar : MonoBehaviour
     Action<BunnyMessage<float>> callback;
 
     private void Awake() {
-        BunnyEventManager.Instance.RegisterEvent("OnBossHurt", this);
+        if(!BunnyEventManager.Instance.TryGetEvent("OnBossHurt", out BunnyEvent dataEvent));
+            BunnyEventManager.Instance.RegisterEvent("OnBossHurt", this);
         slider = GetComponent<Slider>();
         fill = GetComponentInChildren<Image>();
         slider.maxValue = Statistics.Health;

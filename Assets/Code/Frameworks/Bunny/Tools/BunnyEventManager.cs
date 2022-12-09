@@ -46,6 +46,11 @@ namespace Bunny.Tools
             }
         }
 
+        public bool TryGetEvent(string EventName, out BunnyEvent dataEvent)
+        {
+            return _events.TryGetValue(EventName, out dataEvent);
+        }
+
         public BunnyEvent RegisterEvent(string EventName, object source)
         {
             if(_events.ContainsKey(EventName)) {
