@@ -25,4 +25,4 @@ MonoBehaviour:
   DashCooldownTime: 1.2
   DashTime: 0.4
   DashSpeed: 30
-  JumpForce: 100
+  JumpForce: 200
