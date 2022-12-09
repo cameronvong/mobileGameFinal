@@ -5,7 +5,7 @@ using UnityEngine;
 using Bunny;
 using Bunny.Tools;
 
-public class FrameFreeze : MonoBehaviour
+public class FreezeFrame : MonoBehaviour
 {
     bool waiting = false;
     public Action<BunnyMessage<float>> callback;
@@ -22,16 +22,18 @@ public class FrameFreeze : MonoBehaviour
     // Start is called before the first frame update
     public void FeedbackFreeze(BunnyMessage<float> message) {
         if (!waiting) {
-            Time.timeScale = 0.0f;
             StartCoroutine(WaitTime());
         }
     }
 
     IEnumerator WaitTime() {
         waiting = true;
-        yield return new WaitForSecondsRealtime(0.01f);
+        yield return new WaitForSecondsRealtime(0.5f);
+        Time.timeScale = 0.0f;
+        yield return new WaitForSecondsRealtime(0.2f);
         Time.timeScale = 1.0f;
         waiting = false;
     }
+
 
 }
