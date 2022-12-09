@@ -8,7 +8,6 @@ using Bunny.Tools;
 
 public class DefeatedBoss : MonoBehaviour
 {
-    public string nextLevel = "SkullBoss";
     // Start is called before the first frame update
     private void Awake() {
         BunnyEventManager.Instance.RegisterEvent("OnBossHurt", this);
@@ -25,7 +24,7 @@ public class DefeatedBoss : MonoBehaviour
     
     IEnumerator deathAnimWait() {
         yield return new WaitForSecondsRealtime(3.2f);
-        SceneManager.LoadScene("FloatingHeadsScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 }
