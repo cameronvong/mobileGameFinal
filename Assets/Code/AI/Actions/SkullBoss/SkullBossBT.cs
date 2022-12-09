@@ -32,10 +32,6 @@ public class SkullBossBT: BTTree
                 new BTCheckMeleeRange(this),
                 new BTMeleeAttack(this),
             }),
-            new BTSequence(new List<BTNode>
-            {
-                new BTFacePlayer(this),
-            }),
         });
         return root;
     }
@@ -46,6 +42,7 @@ public class SkullBossBT: BTTree
 
     public void OnAttacked(BunnyMessage<float> message) {
         if (Health <= 0) return;
+        flashEffect.Flash(Color.red);
         Health -= message.payload;
         BunnyEventManager.Instance.Fire<float>("OnBossHurt", new BunnyMessage<float>(Health, this));
 

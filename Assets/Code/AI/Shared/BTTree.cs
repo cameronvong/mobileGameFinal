@@ -12,6 +12,7 @@ namespace AI.BehaviourTree {
         public Animator animator;
         public SpriteRenderer spriteRenderer;
         public BoxCollider2D mainCollider;
+        public ColoredFlash flashEffect;
 
         public BunnyEventManager eventManager;
 
@@ -37,6 +38,7 @@ namespace AI.BehaviourTree {
             mainCollider = GetComponent<BoxCollider2D>();
             animator = gameObject.GetComponentInChildren<Animator>();
             spriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
+            flashEffect = gameObject.GetComponentInChildren<ColoredFlash>();
             eventManager = BunnyEventManager.Instance;
         }
 
