@@ -68,6 +68,11 @@ public class Player : MonoBehaviour
         BunnyEventManager.Instance.RegisterEvent("DamagePlayerRequest", this);
     }
 
+    void OnDestroy()
+    {
+        BunnyEventManager.Instance.Disconnect("DamagePlayerRequest");
+    }
+
     void Start()
     {
         // movementSM.ChangeState(movementSM.IdleState);
