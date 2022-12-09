@@ -81,6 +81,7 @@ public class PlayerCode : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
         //attack code
         Debug.Log("Attack!");
+        yield return new WaitForSeconds(0.6f);
         attacking = false;
     }
 
