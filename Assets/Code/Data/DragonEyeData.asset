@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908ff925405494b41a6f5f3be7d4414f, type: 3}
   m_Name: DragonEyeData
   m_EditorClassIdentifier: 
-  Health: 100
+  Health: 1000
   WalkingSpeed: 5
   RunningSpeed: 8
   BaseMeleeDamage: 5
@@ -23,3 +23,6 @@ MonoBehaviour:
   SpecialAttackCooldown: 30
   MeleeAttackRange: 1
   RangeAttackRange: 10
+  EnragePoint: 0.5
+  MeleeAttackAnimLength: 0.8
+  MeleeDamageDelay: 0.5
