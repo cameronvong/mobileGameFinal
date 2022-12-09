@@ -42,6 +42,9 @@ public class Player : MonoBehaviour
     // Events & Callbacks
     Action<BunnyMessage<float>> OnPlayerAttacked;
 
+    // Debounces
+    public bool attackDebounce = true;
+
 
     // Start is called before the first frame update
     private void Awake()
@@ -124,7 +127,8 @@ public class Player : MonoBehaviour
     }
 
     public void Attack() {
-        Debug.Log("Attacking");
+        if(!attackDebounce || stateMachine.currentState == AttackState) return;
+        attackDebounce = false;
         stateMachine.ChangeState(AttackState);
         GameObject obj = GameObject.FindWithTag("Boss");
         // Debug.Log($"Distance is: {Vector3.Distance(obj.transform.position, transform.position)}");
@@ -133,8 +137,9 @@ public class Player : MonoBehaviour
             && stateMachine.currentState == AttackState
         )
         {
-           BunnyEventManager.Instance.Fire<float>("DamageBossRequest", new BunnyMessage<float>(10f, this));
+            BunnyEventManager.Instance.Fire<float>("DamageBossRequest", new BunnyMessage<float>(10f, this));
         }
+        attackDebounce = true;
     }
 
     public void PlayerAttacked(BunnyMessage<float> message)

@@ -38,7 +38,6 @@ public class PlayerAttackState : PlayerMoveState
 
 
     public override bool Validate() {
-        if (!base.Validate()) return false;
-        return player.CurrentAttackTime >= 1f/AttackCooldownTime;
+        return player.CurrentAttackTime >= 1f/AttackCooldownTime && base.Validate();
     }
 }
