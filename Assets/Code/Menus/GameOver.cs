@@ -7,12 +7,11 @@ public class GameOverMenu : MonoBehaviour
 {
     public void Play()
     {
-        //SceneChanger.PreviousScene();
+        SceneManager.LoadScene("SkullBoss");
     }
 
     public void Quit()
     {
-        Debug.Log("QUIT");
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     }
 }
