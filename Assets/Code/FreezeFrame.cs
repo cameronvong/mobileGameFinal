@@ -20,10 +20,10 @@ public class FrameFreeze : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    public void FeedbackFreeze() {
+    public void FeedbackFreeze(BunnyMessage<float> message) {
         if (!waiting) {
             Time.timeScale = 0.0f;
-            StartCoroutine(WaitTime(0.01f));
+            StartCoroutine(WaitTime());
         }
     }
 
