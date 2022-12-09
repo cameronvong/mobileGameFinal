@@ -3,14 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class StartMenuButton : MonoBehaviour
 {
-    void Update() 
-    {
-        // if (Input.GetButtonDown("Play")) { Play(); }
-        // if (Input.GetButtonDown("Quit"))  { Quit(); }
-    }
-
 
     public void Play(){
         Debug.Log("Clicked button");
