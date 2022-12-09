@@ -7,7 +7,7 @@ using Bunny.Tools;
 
 public class FrameFreeze : MonoBehaviour
 {
-    bool waiting;
+    bool waiting = false;
     public Action<BunnyMessage<float>> callback;
 
     private void Awake() {
