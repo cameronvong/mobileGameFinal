@@ -28,7 +28,7 @@ public class FreezeFrame : MonoBehaviour
 
     IEnumerator WaitTime() {
         waiting = true;
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(0.6f);
         Time.timeScale = 0.0f;
         yield return new WaitForSecondsRealtime(0.2f);
         Time.timeScale = 1.0f;
