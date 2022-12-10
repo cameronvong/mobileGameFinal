@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Bunny.Tools;
+using Bunny.Structures;
 
 namespace Bunny.Entries
 {    
@@ -20,6 +21,8 @@ namespace Bunny.Entries
         public int Weight => criteria.Length + padding;
 
         public float Delay => delay;
+
+        public SortedRuleList onEnd = new SortedRuleList();
 
         Action<BunnyMessage<string>> callback;
 

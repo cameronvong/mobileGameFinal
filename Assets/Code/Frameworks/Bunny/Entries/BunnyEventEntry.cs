@@ -22,7 +22,11 @@ namespace Bunny.Entries
         public BunnyEventEntry()
         {
             entryEvent = BunnyEventManager.Instance.RegisterEvent(this.id, BunnyEventManager.Instance);
-            Debug.Log($"Entry event exists {entryEvent != null}");
+            // Debug.Log($"Entry event exists {entryEvent != null}");
+        }
+
+        public void Awake() {
+            entryEvent = BunnyEventManager.Instance.RegisterEvent(this.id, BunnyEventManager.Instance);
         }
 
         public override BunnyEntryDescriptor GetDescriptor() {

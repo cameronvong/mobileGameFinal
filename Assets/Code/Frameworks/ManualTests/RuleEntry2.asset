@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c538d4a6fc493247ae0c7f7dacfbc1f, type: 3}
+  m_Name: RuleEntry2
+  m_EditorClassIdentifier: 
+  id: 9510f17e-6f62-4ea2-859c-0bd42854c399
+  key: 
+  scope:
+    id: 
+  once: 0
+  criteria: []
+  modifications: []
+  isCancellable: 0
+  padding: 0
+  delay: 0
+  triggeredBy: {fileID: 0}
+  triggers: {fileID: 0}
+  onEnd:
+    entries: []
