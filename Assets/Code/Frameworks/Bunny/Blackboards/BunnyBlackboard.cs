@@ -10,7 +10,7 @@ namespace Bunny.Blackboards
         void Set(string id, int value);
     }
 
-    public abstract class BunnyBlackboard
+    public class BunnyBlackboard : IBunnyBlackboard
     {
         private Dictionary<string, int> storage = new();
         private string Name;

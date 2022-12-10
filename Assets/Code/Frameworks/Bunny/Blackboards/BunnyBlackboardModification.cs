@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Bunny.Entries;
 using Bunny.Blackboards;
 using Bunny.Shared;
 
@@ -16,23 +17,22 @@ namespace Bunny.Blackboards
     [Serializable]
     public class BunnyBlackboardModificaiton
     {
-        public string entryId;
-
+        public BunnyBaseEntry entry;
         public BunnyFactOperation operation = BunnyFactOperation.SET;
 
         public int input;
 
-        public void Execute(IBunnyDatabase database)
+        public void Execute(BunnyDatabase database)
         {
-            IBunnyBlackboard blackboard = database.GetBlackboardForEntry(entryId);
-            int value = blackboard.Get(entryId);
+            IBunnyBlackboard blackboard = database.GetBlackboardForEntry(entry);
+            int value = blackboard.Get(entry.id);
 
             switch(operation) {
                 case BunnyFactOperation.SET:
-                    blackboard.Set(entryId, input);
+                    blackboard.Set(entry.id, input);
                     break;
                 case BunnyFactOperation.INCREMENT:
-                    blackboard.Set(entryId, input + value);
+                    blackboard.Set(entry.id, input + value);
                     break;
                 default:
                     break;

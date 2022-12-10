@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 7eb6d356-cc2b-4b7e-83fa-7cff5460bf24
   key: 
   once: 0
+  scope: 0
   criteria:
-  - {fileID: 11400000, guid: 4ca25225a2caae3428c633e866b14683, type: 2}
+  - {fileID: 11400000, guid: 77ecdad137fd7ac44a398e2aef2b9cfe, type: 2}
   modifications:
   - entryId: 
     operation: 0

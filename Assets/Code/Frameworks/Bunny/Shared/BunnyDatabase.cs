@@ -7,7 +7,6 @@ using Bunny.Entries;
 
 namespace Bunny.Shared
 {
-
     public interface IBunnyDatabase
     {
         IBunnyBlackboard GetBlackboardForEntry(string entry);
@@ -25,6 +24,53 @@ namespace Bunny.Shared
     [CreateAssetMenu(fileName="BunnyDatabase", menuName="Bunny/Dialogue/Database", order = 0)]
     public class BunnyDatabase : ScriptableObject
     {
-        public List<IBunnyBlackboard> blackboards;
+        public List<BunnyTable> tables;
+        public Dictionary<BunnyEntryScope, IBunnyBlackboard> blackboards = new();
+        public Dictionary<string, BunnyBaseEntry> entryLookup;
+        public Dictionary<BunnyBaseEntry, BunnyTable> tableLookup;
+
+        public static readonly object padlock = new object();
+        private static BunnyDatabase _instance;
+
+        public static BunnyDatabase Instance 
+        {
+            get
+            {
+                lock(padlock)
+                {
+                    if(_instance == null)
+                    {
+                        _instance = new BunnyDatabase();
+                    }
+                    return _instance;
+                }
+            }
+        }
+
+        public BunnyDatabase()
+        {
+            foreach(BunnyEntryScope scope in Enum.GetValues(typeof(BunnyEntryScope)))
+            {
+                blackboards.Add(scope, new BunnyBlackboard());
+            }
+        }
+
+        public IBunnyBlackboard GetBlackboardForEntry(BunnyBaseEntry entry)
+        {
+            return blackboards[entry.scope];
+        }
+
+        public void ApplyEntry(BunnyBaseEntry entry, BunnyTable table)
+        {
+            table.AddEntry(entry);
+        }
+
+        public void Awake()
+        {
+            foreach(BunnyTable table in tables)
+            {
+                table.Initialize(this);
+            }
+        }
     }
 }

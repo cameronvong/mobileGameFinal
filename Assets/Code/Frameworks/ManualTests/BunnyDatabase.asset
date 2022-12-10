@@ -9,13 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26ceda48123548240a353c0327a32019, type: 3}
-  m_Name: test
+  m_Script: {fileID: 11500000, guid: e94f40a9e6d22d14c8f797707aa893c4, type: 3}
+  m_Name: BunnyDatabase
   m_EditorClassIdentifier: 
-  id: 6740a1d6-3741-45ad-9e0b-f6dd910716b6
-  key: 
-  once: 0
-  criteria: []
-  modifications: []
-  entryEvent:
-    eventName: 6740a1d6-3741-45ad-9e0b-f6dd910716b6
+  tables: []

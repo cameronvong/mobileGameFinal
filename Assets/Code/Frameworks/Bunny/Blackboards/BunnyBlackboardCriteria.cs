@@ -21,18 +21,15 @@ namespace Bunny.Blackboards
     [CreateAssetMenu(fileName="Dialogue Criteria", menuName="Bunny/Dialogue/Dialogue Criteria")]
     public class BunnyBlackboardCriteria : ScriptableObject
     {
-        public string entryId;
+        public BunnyBaseEntry entry;
 
         public BunnyFactComparator comparator = BunnyFactComparator.EQUALS_TO;
 
         public int input;
 
-        public bool Test(IBunnyDatabase database)
+        public bool Test(BunnyDatabase database)
         {
-            int value = database.GetBlackboardForEntry(entryId).Get(entryId);
-            bool entryExists = database.TryGetEntry(entryId, out BunnyBaseEntry candidate);
-
-            if(!entryExists) return false;
+            int value = database.GetBlackboardForEntry(entry).Get(entry.id);
         
             switch(comparator) {
                 case BunnyFactComparator.EQUALS_TO:
@@ -46,7 +43,7 @@ namespace Bunny.Blackboards
                 case BunnyFactComparator.GREATER_THAN_EQ:
                     return value >= input;
                 case BunnyFactComparator.EXISTS:
-                    return entryExists;
+                    return true;
                 default:
                     return false;
             }

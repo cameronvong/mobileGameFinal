@@ -7,6 +7,12 @@ using Bunny.Blackboards;
 
 namespace Bunny.Entries
 {
+    public enum BunnyEntryScope {
+        GLOBAL,
+        SCENE,
+        TEMPORARY
+    }
+
     [Serializable]
     public abstract class BunnyBaseEntry : ScriptableObject
     {
@@ -15,6 +21,7 @@ namespace Bunny.Entries
         public string key;
 
         public bool once;
+        public BunnyEntryScope scope = BunnyEntryScope.TEMPORARY;
         private BunnyEntryDescriptor descriptor;
 
         public BunnyBlackboardCriteria[] criteria;

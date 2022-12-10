@@ -1,8 +1,12 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Bunny.Entries;
 using Bunny.Tools;
+using Bunny.Shared;
+using Bunny.Blackboards;
 
 namespace Bunny.Entries
 {    
@@ -21,26 +25,27 @@ namespace Bunny.Entries
 
         public float Delay => delay;
 
-        Action<BunnyMessage<string>> callback;
+        Action<BunnyMessage<RuleEventArgs>> callback;
 
         public BunnyRuleEntry() {
             callback = this.Execute;
         }
 
-
         public override BunnyEntryDescriptor GetDescriptor() {
             return BunnyEntryDescriptor.BunnyRuleDescriptor;
         }
 
-        public void Execute(BunnyMessage<string> message)
+        public void Execute(BunnyMessage<RuleEventArgs> message)
         {
+            if(message.payload.ruleId != this.id) return;
             Debug.Log($"Rule - {this.id} executed");
+            GetDescriptor().UpdateModifications(this);
             if(triggers != null)
                 triggers.Raise();
         }
 
         public void Awake() {
-            BunnyEventManager.Instance.OnEventRaised<string>(triggeredBy.id, callback);
+            BunnyEventManager.Instance.OnEventRaised<RuleEventArgs>(triggeredBy.id, callback);
         }
 
         void OnDisable()
