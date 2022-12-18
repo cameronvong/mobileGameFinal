@@ -138,7 +138,7 @@ public class Player : MonoBehaviour
             && stateMachine.currentState == AttackState
         )
         {
-            BunnyEventManager.Instance.Fire<float>("DamageBossRequest", new BunnyMessage<float>(10000f, this));
+            BunnyEventManager.Instance.Fire<float>("DamageBossRequest", new BunnyMessage<float>(10f, this));
         }
         attackDebounce = true;
     }
