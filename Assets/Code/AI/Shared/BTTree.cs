@@ -33,18 +33,20 @@ namespace AI.BehaviourTree {
 
         public virtual void Awake()
         {
-            Health = GeneralData.Health;
-            body = GetComponent<Rigidbody2D>();
-            mainCollider = GetComponent<BoxCollider2D>();
-            animator = gameObject.GetComponentInChildren<Animator>();
-            spriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
-            flashEffect = gameObject.GetComponentInChildren<ColoredFlash>();
             eventManager = BunnyEventManager.Instance;
         }
 
         protected void Start()
         {
             Debug.Log("Called start");
+            Health = GeneralData.Health;
+            body = GetComponent<Rigidbody2D>();
+            mainCollider = GetComponent<BoxCollider2D>();
+            animator = gameObject.GetComponentInChildren<Animator>();
+            spriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
+            this.flashEffect = gameObject.GetComponentInChildren<ColoredFlash>();
+            GameObject plyrObj = GameObject.FindWithTag("Player");
+            if(plyrObj != null) target = plyrObj.GetComponent<Player>();
             _root = SetupTree();
         }
 

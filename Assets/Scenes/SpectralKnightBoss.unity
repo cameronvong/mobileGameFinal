@@ -1479,6 +1479,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
   mainCollider: {fileID: 0}
+  flashEffect: {fileID: 0}
   eventManager:
     EventLibrary: []
   target: {fileID: 1556151273}

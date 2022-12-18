@@ -56,17 +56,6 @@ public class Player : MonoBehaviour
         AttackState = new PlayerAttackState(this, stateMachine, "attack");
         DeathState = new PlayerDeathState(this, stateMachine, "death");
         HurtState = new PlayerHurtState(this, stateMachine, "hurt");
-        
-        InputManager = GetComponent<PlayerInputManager>();
-        AnimComponent = GetComponentInChildren<Animator>();
-        rigidBody2D = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-
-        Stamina = PlayerStats.Stamina;
-        Health = PlayerStats.MaxHealth;
-        CurrentDashTime = PlayerStats.DashCooldownTime;
-        CurrentAttackTime = 1f/PlayerStats.AttackSpeed;
 
         BunnyEventManager.Instance.RegisterEvent("DamagePlayerRequest", this);
     }
@@ -79,6 +68,17 @@ public class Player : MonoBehaviour
     void Start()
     {
         // movementSM.ChangeState(movementSM.IdleState);
+        InputManager = GetComponent<PlayerInputManager>();
+        AnimComponent = GetComponentInChildren<Animator>();
+        rigidBody2D = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        Stamina = PlayerStats.Stamina;
+        Health = PlayerStats.MaxHealth;
+        CurrentDashTime = PlayerStats.DashCooldownTime;
+        CurrentAttackTime = 1f/PlayerStats.AttackSpeed;
+        attackDebounce = true;
         stateMachine.Initialize(IdleState, IdleState);
 
         OnPlayerAttacked = PlayerAttacked;
@@ -127,6 +127,7 @@ public class Player : MonoBehaviour
     }
 
     public void Attack() {
+        Debug.Log($"Attack clicked {stateMachine.currentState} {attackDebounce}");
         if(!attackDebounce || stateMachine.currentState == AttackState) return;
         attackDebounce = false;
         stateMachine.ChangeState(AttackState);
@@ -137,7 +138,7 @@ public class Player : MonoBehaviour
             && stateMachine.currentState == AttackState
         )
         {
-            BunnyEventManager.Instance.Fire<float>("DamageBossRequest", new BunnyMessage<float>(10f, this));
+            BunnyEventManager.Instance.Fire<float>("DamageBossRequest", new BunnyMessage<float>(10000f, this));
         }
         attackDebounce = true;
     }
