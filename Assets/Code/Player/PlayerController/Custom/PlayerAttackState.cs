@@ -22,6 +22,7 @@ public class PlayerAttackState : PlayerMoveState
 
     private IEnumerator HandleAnim() {
         yield return new WaitForSeconds(1f);
+        player.attackDebounce = true;
         stateMachine.SetPerformingAction(false);
         stateMachine.ChangeState(stateMachine.GetPreviousState());
     }

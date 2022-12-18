@@ -7,7 +7,7 @@ public class GameOverMenu : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene("SkullBoss");
+        SceneManager.LoadScene("SkullBoss", LoadSceneMode.Single);
     }
 
     public void Quit()
